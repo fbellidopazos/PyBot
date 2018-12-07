@@ -1,0 +1,26 @@
+APP NAME: PythonAlpha
+
+APPID: UQ2PAA-Y2QK6KVRA9
+
+USAGE TYPE: Personal/Non-commercial Only
+https://products.wolframalpha.com/simple-api/documentation/
+
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+    if message.content.startswith('hello'):
+        hellos = ["Hello","Wazzap!!!", "May the 4th be with You,","A bit late...","Goodnight!"]
+        msg = random.choice(hellos) + "{0.author.mention}".format(message)
+        await client.send_message(message.channel, msg)
+
+    if message.content.startswith('.220'):
+        msg= "284"
+        await client.send_message(message.channel, msg)
+    if message.content.startswith('.284'):
+        msg= "220"
+        await client.send_message(message.channel, msg)
+    if message.content.startswith('.time'):
+        msg= datetime.datetime.now()
+        await client.send_message(message.channel, msg)
