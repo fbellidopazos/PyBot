@@ -99,14 +99,7 @@ async def nsfw(ctx,*,ctxnsfw:int):
     await client.delete_message(ctx.message)
 
 
-with open('Remembers.txt', 'r') as f:
-    Remembers = ast.literal_eval(f.read())
-#Remembers
-@client.command(pass_context=True)
-async def list(context):
-    data = Remembers[str(context.message.author.mention)]
 
-    await client.say (data)
 
 #Clear messages
 @client.command(pass_context=True)
