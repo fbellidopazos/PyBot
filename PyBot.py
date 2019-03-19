@@ -35,7 +35,7 @@ COMMANDS
 
 
 BOT_PREFIX = (".","")
-TOKEN = 'NDgyMTQ3NDM4MTE1Njg0MzYz.DmXEww.1daNnGTVdUNZs2-2FVe9lAM1xS4'  # Get at discordapp.com/developers/applications/me
+TOKEN = 'Add YOURS'  # Get at discordapp.com/developers/applications/me
 role_id="461171949197066241"#Owner ROLE
 client = Bot(command_prefix=BOT_PREFIX)
 reddit = praw.Reddit(client_id='StI7zL-mxlm2HQ',
