@@ -16,6 +16,23 @@ import time
 import ast
 
 
+'''
+COMMANDS
+==============================
+    -8ball
+    -UrbanDictionary (ud <Word>)
+    -WolframAlpha(wolfram <Query>)
+    -NSFW(nsfw <number> )
+    -Clear (clear <number> only ADMIN)
+
+
+# TODO
+===========================
+-Giveaways??
+'''
+
+
+
 
 BOT_PREFIX = (".","")
 TOKEN = 'NDgyMTQ3NDM4MTE1Njg0MzYz.DmXEww.1daNnGTVdUNZs2-2FVe9lAM1xS4'  # Get at discordapp.com/developers/applications/me
@@ -48,15 +65,6 @@ async def eight_ball(context):
     await client.say(random.choice(possible_responses) + ", " + context.message.author.mention)
 
 
-
-
-##Square Number
-@client.command(name='square',
-                description="Give the square of the input number",
-                brief="square <number>")
-async def square(number):
-    squared_value = int(number) * int(number)
-    await client.say(str(number) + " squared is " + str(squared_value))
 
 ##Urban Dictionary
 @client.command(name='ud',
@@ -118,8 +126,10 @@ async def clear(ctx, number):
     else:
         await client.say("You are not permitted")
 
-
-
+@client.event
+async def on_member_join(member):
+    role = discord.utils.get(member.server.roles, name="Regular")
+    await client.add_roles(member,role)
 
 ##!PingPongs¡
 ##=====================================================
