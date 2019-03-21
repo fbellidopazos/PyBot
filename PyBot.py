@@ -29,13 +29,14 @@ COMMANDS
 # TODO
 ===========================
 -Giveaways??
+-Embeds?? https://www.youtube.com/watch?v=XKQWxAaRgG0&t
 '''
 
 
 
 
 BOT_PREFIX = (".","")
-TOKEN = 'Add YOURS'  # Get at discordapp.com/developers/applications/me
+TOKEN = 'NDgyMTQ3NDM4MTE1Njg0MzYz.D3IkHg.pbRBXPTxphZUY1LwjA_gAp762qg'  # Get at discordapp.com/developers/applications/me
 role_id="461171949197066241"#Owner ROLE
 client = Bot(command_prefix=BOT_PREFIX)
 reddit = praw.Reddit(client_id='StI7zL-mxlm2HQ',
@@ -80,10 +81,10 @@ async def ud(word):
                 description="Wolfram Alpha search-NO SPACE IN INPUT",
                 brief="wolfram <query(no spaces)>",pass_context=True)
 async def wolfram(self,*,ctx):
-    url = 'http://api.wolframalpha.com/v1/simple?appid=UQ2PAA-Y2QK6KVRA9&i={}'.format(ctx.replace(" ", "%20"))
+    url = 'http://api.wolframalpha.com/v1/simple?appid=UQ2PAA-Y2QK6KVRA9&i={}'.format((ctx.replace(" ", "%20")).replace("+","%2B"))
 
     await client.say (url)
-    await client.say (ctx)
+
 
 
 #NSFW
@@ -96,12 +97,12 @@ async def nsfw(ctx,*,ctxnsfw:int):
     post_to_pick = random.randint(1, 15)
 
     amount=ctxnsfw
-
+    client.delete_message(ctx.message)
     while amount!=0:
         for i in range(0, post_to_pick):
             submission = next(x for x in nsfw if not x.stickied)
 
-        await client.say (submission.url)
+        await client.send_message (discord.Object(id="461240565980463128"),submission.url)
         amount-=1
         time.sleep(2)
     await client.delete_message(ctx.message)
@@ -126,10 +127,46 @@ async def clear(ctx, number):
     else:
         await client.say("You are not permitted")
 
+
+
+'''
+#Joinables
+@client.command(pass_context=True)
+async def join(ctx, role: discord.Role = None):
+
+        """
+        Toggle whether or not you have a role. Usage: `!role DivinityPing`. Can take roles with spaces.
+        :param role: Anything after "role"; should be the role name.
+        """
+        if role is None:
+            return await client.say("You haven't specified a role! ")
+
+        if role not in ctx.message.server.roles:
+            return await client.say("That role doesn't exist.")
+
+        if role not in ctx.message.author.roles:
+            await client.add_roles(ctx.message.author, role)
+            return await client.say("{} role has been added to {}.".format(role, ctx.message.author.mention))
+
+        if role in ctx.message.author.roles:
+            await client.remove_roles(ctx.message.author, role)
+            return await client.say("{} role has been removed from {}."
+                                      .format(role, ctx.message.author.mention))
+
+
+
+
+
+#AUTOROLE
 @client.event
 async def on_member_join(member):
     role = discord.utils.get(member.server.roles, name="Regular")
     await client.add_roles(member,role)
+@client.event
+async def on_member_join(member):
+    msg= "Aqui va mensaje de bienvenida privado"
+    await client.send_message(member,)
+    '''
 
 ##!PingPongs¡
 ##=====================================================
