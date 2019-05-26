@@ -10,3 +10,6 @@ class User():
 
     def setMainRole(self,mainRole):
         self.mainRole=mainRole
+    def toString(self):
+        return ("Name: "+str(self.name)+"\nmainRole: "+self.mainRole+"\nRoles: "+str(self.roles)+"\n\n")
+

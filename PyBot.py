@@ -24,9 +24,17 @@ COMMANDS
     -WolframAlpha(wolfram <Query>)
     -NSFW(nsfw <number> )
     -Clear (clear <number> only ADMIN)
+    -join/leave <list/role>
+    -backUp (Admin ONLY)
+    -users (Admin ONLY)
 
+Functions
+==========================
+find(name) : User
+backUpPickle()
+usersToString(): STRING
 
-# TODO
+TODO
 ===========================
 -Giveaways??
 -Embeds?? https://www.youtube.com/watch?v=XKQWxAaRgG0&t
@@ -41,11 +49,24 @@ reddit = praw.Reddit(client_id='StI7zL-mxlm2HQ',
                      client_secret='lUkCF66UgqEJgE03JkkAkXWQzKA',
                      user_agent='PyBotNSFW')
 
-Users=[]
+f = open("Users.pkl", "rb")
+Users = pickle.load(f)
+f.close()
+
 def find(name):
     for i in range(0,len(Users)):
         if(Users[i].name==name):
             return i
+def backUpPickle():
+    f = open("Users.pkl", "wb")
+    pickle.dump(Users, f)
+    f.close()
+def usersToString():
+    res=""
+    for i in Users:
+        res=res+i.toString()
+    return(res)
+
 
 # COMMANDS
 # =====================================================
@@ -145,8 +166,7 @@ async def join(ctx,command:str):
             res = res + "\n" + str(i)
         await client.say(res)
     elif(command.lower() in joinables):
-        Users[find(author)].addRole(command.lower())
-        print(Users[find(author)].roles)
+       # Users[find(author)].addRole(command.lower())
         await client.add_roles(author, discord.utils.get(author.server.roles, name=command.lower()))
 #Leaves
 @client.command(pass_context=True)
@@ -159,12 +179,19 @@ async def leave(ctx,command:str):
             res = res + "\n" + str(i)
         await client.say(res)
     elif(command.lower() in joinables):
-        Users[find(author)].removeRole(command.lower())
-        print(Users[find(author)].roles)
+       # Users[find(author)].removeRole(command.lower())
         await client.remove_roles(author, discord.utils.get(author.server.roles, name=command.lower()))
 
 
+# BACKUP
+@client.command(pass_context=True)
+async def backUp(ctx):
+    backUpPickle()
+    print(usersToString())
+@client.command(pass_context=True)
+async def users(ctx):
 
+    await client.say(usersToString())
 
 
 ##!PingPongs¡
@@ -191,6 +218,7 @@ async def on_ready():
 async def on_member_join(member):
     a = User(member,"Regular")
     Users.append(a)
+    backUpPickle()
     await client.send_message(member, "TEST")
     await client.add_roles(member, discord.utils.get(member.server.roles, name="Regular"))
 
@@ -201,12 +229,8 @@ async def list_servers():
         print("Current servers:")
         for server in client.servers:
             print(server.name)
-        with open("Users.pickle", "wb") as f:
-            pickle.dump(Users, f)
         await asyncio.sleep(1000)
 
 
 client.loop.create_task(list_servers())
 client.run(TOKEN)
-with open("Users.pickle", "rb") as f:
-    Users = pickle.load(f)
