@@ -4,6 +4,6 @@ async def command(ctx, number):
     author=ctx.message.author
     role=discord.utils.get(server.roles,id=role_id)
     if role in author.roles:
-        #Commands Here
+        # Commands Here
     else:
         await client.say("You are not permitted")

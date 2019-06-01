@@ -25,8 +25,14 @@ COMMANDS
     -NSFW(nsfw <number> )
     -Clear (clear <number> only ADMIN)
     -join/leave <list/role>
-    -backUp (Admin ONLY)
-    -users (Admin ONLY)
+    
+    ADMIN ONLY
+    =========================
+    -backUp 
+    -users 
+    -addUser
+    -removeUser
+    -setNick
 
 Functions
 ==========================
@@ -48,15 +54,18 @@ client = Bot(command_prefix=BOT_PREFIX)
 reddit = praw.Reddit(client_id='StI7zL-mxlm2HQ',
                      client_secret='lUkCF66UgqEJgE03JkkAkXWQzKA',
                      user_agent='PyBotNSFW')
-
+Users=[]
 f = open("Users.pkl", "rb")
 Users = pickle.load(f)
 f.close()
 
 def find(name):
-    for i in range(0,len(Users)):
+    res=-1
+    for i in range(len(Users)):
+        res+=1
         if(Users[i].name==name):
-            return i
+            break
+    return res
 def backUpPickle():
     f = open("Users.pkl", "wb")
     pickle.dump(Users, f)
@@ -70,6 +79,13 @@ def usersToString():
 
 # COMMANDS
 # =====================================================
+# HELLO´s
+@client.command(pass_context=True)
+async def hello(context):
+    hellos = ["Hello", "Wazzap!!!", "May the 4th be with You,", "A bit late...", "Goodnight!"]
+    msg = random.choice(hellos) + "{}".format(context.message.author.mention)
+    print(context.message.author.mention)
+    await client.say(msg)
 # Eight Ball
 @client.command(name='8ball',
                 description="Answers a yes/no question.",
@@ -91,7 +107,7 @@ async def eight_ball(context):
 @client.command(name='ud',
                 description="Gives the definition of the input word,searched in Urban Dictionary",
                 brief="ud <word>")
-async def ud(word):
+async def urban(word):
     source = requests.get("http://www.urbandictionary.com/define.php?term={}".format(word))
     soup = BeautifulSoup(source.content, "html.parser")
     msg = soup.find("div", attrs={"class": "meaning"}).text
@@ -107,6 +123,10 @@ async def wolfram(self,*, ctx):
         (ctx.replace(" ", "%20")).replace("+", "%2B"))
 
     await client.say(url)
+
+
+
+
 
 
 # NSFW
@@ -135,7 +155,59 @@ async def nsfw(ctx, *, ctxnsfw: int):
         await client.delete_message(ctx.message)
     else:
         await client.say("You must be in nsfw role.\nTry the 'join nsfw' command")
+@client.command(pass_context=True)
+async def nsfwPrivate(ctx, *, ctxnsfw: int):
+    # NSFW ROLE ID: 581924915507101701
+    server = ctx.message.server
+    author = ctx.message.author
+    role = discord.utils.get(server.roles, id="461179333407539200")
+    nsfw = reddit.subreddit('nsfw+RealGirls+LegalTeens+Boobies+palegirls+redheads+ginger+Hotchickswithtattoos+bodyperfection+PrettyGirls+suicidegirls+goddesses+altgonewild+HighResNSFW+BonerMaterial+nsfw2+SexyFrex+boobs+lingerie+sexygirls+SnowWhites+iWantToFuckHer+SexyButNotPorn+fortyfivefiftyfive+braceface+JustHotWomen+thinspo+stripgirls+Page3Glamour+Playboy+GifsOfRemoval+wet+barelylegalteens+SceneGirls+NSFW_nospam+AlbumBabes+B_Cups+shewantstofuck+Barelylegal+girlsdoingnerdythings+classysexy+Sexy+NSFW_Wallpapers+PantyPeel+UHDnsfw+peachfuzz+UnrealGirls+FuckingPerfect+redhead+TheHottestBabes+slimgirls+primes+skivvies+THEGOLDSTANDARD+SoHotItHurts+nsfw_hd+18_20+18nsfw+Hotness+BareGirls+redlingerie+Perfect_NSFW+OnlyGoodPorn+fyeahsexyteens+AmazingTeens+fuckyeahsexyteens+HotGirls+paleskin+Babes+BetterThanPorn+nsfwnonporn+countrygirls+Playboy_Albums+realperfection+TeaGirls+ThinChicksWithTits+hq_nsfw+Straps+GorgeousGirlsNSFW+DomesticGirls+RealBeauties+Sexyness+StrippingOffShirts+RiaeSuicide+nsfw_bw+nsfw_sexy_girls+BacklitBeauty+SexyGoosebumps+tattooed_redheads+Bangable+TotalBabes+BikiniTeens+Headless+Randomgirls+HotGirlsNSFW+sexynsfw+Adultpics+debs_and_doxies+nsfwonly+nsfwnew').hot()
+    post_to_pick = random.randint(1, 15)
+    amount = ctxnsfw
+    client.delete_message(ctx.message)
+    while amount != 0:
+        for i in range(0, post_to_pick):
+            submission = next(x for x in nsfw if not x.stickied)
 
+        await client.send_message(author, submission.url)
+        amount -= 1
+        time.sleep(2)
+    await client.delete_message(ctx.message)
+#JOIN
+@client.command(pass_context=True)
+async def join(ctx,command:str):
+    joinables=["nsfw","nitain","catalyst","reactor"]
+    author = ctx.message.author
+    if command=="list":
+        res = ""
+        for i in joinables:
+            res = res + "\n" + str(i)
+        await client.say(res)
+    elif(command.lower() in joinables):
+        await client.add_roles(author, discord.utils.get(author.server.roles, name=command.lower()))
+#Leaves
+@client.command(pass_context=True)
+async def leave(ctx,command:str):
+    joinables=["nsfw","nitain","catalyst","reactor"]
+    author = ctx.message.author
+    if command=="list":
+        res = ""
+        for i in joinables:
+            res = res + "\n" + str(i)
+        await client.say(res)
+    elif(command.lower() in joinables):
+
+       # Users[find(author)].removeRole(command.lower())
+        await client.remove_roles(author, discord.utils.get(author.server.roles, name=command.lower()))
+
+
+
+
+
+
+
+
+Sa
 # Clear messages
 @client.command(pass_context=True)
 async def clear(ctx, number):
@@ -152,59 +224,73 @@ async def clear(ctx, number):
             await asyncio.sleep(0.2)
     else:
         await client.say("You are not permitted")
-
-
-
-#JOIN
-@client.command(pass_context=True)
-async def join(ctx,command:str):
-    joinables=["nsfw","nitain","catalyst","reactor"]
-    author = ctx.message.author
-    if command=="list":
-        res = ""
-        for i in joinables:
-            res = res + "\n" + str(i)
-        await client.say(res)
-    elif(command.lower() in joinables):
-       # Users[find(author)].addRole(command.lower())
-        await client.add_roles(author, discord.utils.get(author.server.roles, name=command.lower()))
-#Leaves
-@client.command(pass_context=True)
-async def leave(ctx,command:str):
-    joinables=["nsfw","nitain","catalyst","reactor"]
-    author = ctx.message.author
-    if command=="list":
-        res = ""
-        for i in joinables:
-            res = res + "\n" + str(i)
-        await client.say(res)
-    elif(command.lower() in joinables):
-       # Users[find(author)].removeRole(command.lower())
-        await client.remove_roles(author, discord.utils.get(author.server.roles, name=command.lower()))
-
-
 # BACKUP
 @client.command(pass_context=True)
 async def backUp(ctx):
-    backUpPickle()
-    print(usersToString())
+    server = ctx.message.server
+    author = ctx.message.author
+    role = discord.utils.get(server.roles, id=role_id)
+    if role in author.roles:
+        backUpPickle()
+        print(usersToString())
+        await client.send_message(author, "LOG:\n========================\n"+usersToString())
+        await client.say("BACKED-UP")
+    else:
+        await client.say("You are not owner")
 @client.command(pass_context=True)
 async def users(ctx):
-
-    await client.say(usersToString())
-
-
-##!PingPongs¡
-##=====================================================
-
-##Hellos
+    server = ctx.message.server
+    author = ctx.message.author
+    role = discord.utils.get(server.roles, id=role_id)
+    if role in author.roles:
+        await client.send_message(author, "LOG:\n========================\n"+ usersToString())
+    else:
+        await client.say("You are not owner")
 @client.command(pass_context=True)
-async def hello(context):
-    hellos = ["Hello", "Wazzap!!!", "May the 4th be with You,", "A bit late...", "Goodnight!"]
-    msg = random.choice(hellos) + "{}".format(context.message.author.mention)
-    print(context.message.author.mention)
+async def addUser(ctx,name,nick,mainRole):
+    server = ctx.message.server
+    author = ctx.message.author
+    role = discord.utils.get(server.roles, id=role_id)
+    if role in author.roles:
+        a=User(name,nick,mainRole)
+        Users.append(a)
+        backUpPickle()
 
-    await client.say(msg)
+    else:
+        await client.say("You are not owner")
+@client.command(pass_context=True)
+async def removeUser(ctx,name):
+    server = ctx.message.server
+    author = ctx.message.author
+    role = discord.utils.get(server.roles, id=role_id)
+    if role in author.roles:
+        User=Users[find(name)]
+        Users.remove(User)
+        await client.kick(User.name)
+        backUpPickle()
+    else:
+        await client.say("You are not owner")
+@client.command(pass_context=True)
+async def setNick(ctx,name,nick):
+    server = ctx.message.server
+    author = ctx.message.author
+    role = discord.utils.get(server.roles, id=role_id)
+    if role in author.roles:
+        User=Users[find(name)]
+        User.setNick(nick)
+        backUpPickle()
+        await client.change_nickname(User.name, nick)
+    else:
+        await client.say("You are not owner")
+
+
+
+
+
+
+
+
+
 
 
 ##Connection INFO
@@ -216,7 +302,7 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
-    a = User(member,"Regular")
+    a = User(member,member.display_name,"Regular")
     Users.append(a)
     backUpPickle()
     await client.send_message(member, "TEST")
