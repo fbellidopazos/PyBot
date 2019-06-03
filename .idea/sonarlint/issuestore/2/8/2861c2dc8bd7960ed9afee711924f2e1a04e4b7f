@@ -1,32 +1,0 @@
-
-tpython:S117°"URename this local variable "User" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÿû∫§8ﬂ¶á¢±-
-Jpython:S1481¨"%Remove the unused local variable "i".(£π„≠¸ˇˇˇˇ8ﬂ¶á¢±-
-X
-AWr09620UZWzBm9FFmsNpython:S125"Remove this commented out code.(ø÷Íù˝ˇˇˇˇ8Ä—›ßØ-
-tpython:S117I"VRename this local variable "Users" to match the regular expression ^[_a-z][a-z0-9_]*$.(ä•ñç8∑ã®…±-
-é
-AWr09620UZWzBm9FFmsVpython:S1542ú"SRename function "removeUser" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ûŸÒÊ˝ˇˇˇˇ8Ä—›ßØ-
-ypython:S1542¢"TRename function "nsfwPrivate" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ø˜ƒØ˘ˇˇˇˇ8ﬂ¶á¢±-
-Hpython:S1481¶"(Remove the unused local variable "role".(’˝ä√8ﬂ¶á¢±-
-ä
-AWr09620UZWzBm9FFmsQpython:S1542C"URename function "backUpPickle" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ü±·ﬂ8Ä—›ßØ-
-X
-AWr09620UZWzBm9FFmsKpython:S125"Remove this commented out code.(æ”‚˜˛ˇˇˇˇ8Ä—›ßØ-
-Hpython:S1481I")Remove the unused local variable "Users".(ä•ñç8∑ã®…±-
-S
-AWr09620UZWzBm9FFmsMpython:S125"Remove this commented out code.(íøöÌ8Ä—›ßØ-
-upython:S1542è"PRename function "addUser" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ã≥˙˚ˇˇˇˇ8ﬂ¶á¢±-
-wpython:S1542G"SRename function "loadPickle" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(€›ÿ´˘ˇˇˇˇ8∑ã®…±-
-ê
-AWr09620UZWzBm9FFmsRpython:S1542K"VRename function "usersToString" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(∆•‘æ˛ˇˇˇˇ8Ä—›ßØ-
-upython:S1542©"PRename function "setNick" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(¶ıÓÒ˙ˇˇˇˇ8ﬂ¶á¢±-
-X
-AWr09620UZWzBm9FFmsLpython:S125	"Remove this commented out code.(éæê¶˙ˇˇˇˇ8Ä—›ßØ-
-ä
-AWr09620UZWzBm9FFmsTpython:S1542Í"ORename function "backUp" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ê‡¯á¸ˇˇˇˇ8Ä—›ßØ-
-Jpython:S1481é"*Remove the unused local variable "server".(û¯ç”8∑ã®…±-
-xpython:S117è"TRename this parameter "mainRole" to match the regular expression ^[_a-z][a-z0-9_]*$.(ã≥˙˚ˇˇˇˇ8ﬂ¶á¢±-
-`
-AWr09620UZWzBm9FFmsOpython:S1481ó"%Remove the unused local variable "i".(£π„≠¸ˇˇˇˇ8Ä—›ßØ-
-tpython:S117Æ"URename this local variable "User" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÿû∫§8ﬂ¶á¢±-
->python:S125ê"Remove this commented out code.(≤¢ΩÓ8∑ã®…±-

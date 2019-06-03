@@ -43,7 +43,7 @@ class CommandErrorHandler(commands.Cog):
         print('Ignoring exception in command {}:'.format(ctx.command), file=sys.stderr)
         traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
 
-    @commands.command(name='repeat', aliases=['mimic', 'copy'])
+    @commands.command(name='repeat', aliases=['mimic', 'copy'],hidden=True)
     @commands.is_owner()
     async def do_repeat(self, ctx, *, inp: str):
         await ctx.send(inp)

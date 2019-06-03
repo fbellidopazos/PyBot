@@ -12,8 +12,6 @@
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 >
 .gitattributes,2\4\24139dae656713ba861751fb2c2ac38839349a7a
-8
-PyBot.py,2\8\2861c2dc8bd7960ed9afee711924f2e1a04e4b7f
 C
 extensions/Admin.py,1\a\1ae379e754b97fed1269e81e234f0bfe3d7fbdea
 ?
@@ -24,3 +22,5 @@ C
 extensions/Utils.py,e\3\e34c42e871371b59cf1955abae213e0f7fc87468
 K
 extensions/Error_Handler.py,3\d\3d53c555f90f634f42c0f30ff077652e560f9913
+C
+extensions/Music.py,f\b\fbd1c0d49ac0f44832974af6a938a80b00d092a5

@@ -2,9 +2,14 @@ from discord.ext import commands
 import discord
 import random
 
+from scipy.optimize._tstutils import description
+
+
 class Basic(commands.Cog):
     def ___init___(self,client):
         self.client = client
+
+
     @commands.command(name='hello', description="Says hello", brief="Hello",
                       aliases=['hi', 'ping', 'hey'])
     async def hello(self,ctx):
@@ -37,37 +42,34 @@ class Basic(commands.Cog):
         await ctx.send(random.choice(possible_responses) + ", " + ctx.message.author.mention)
 
 
+    @commands.command(name="join",description="Join available joinable",brief="join <joinable>")
+    async def join(self,ctx,arg="list"):
+        joinables = ["nsfw", "nitain", "catalyst", "reactor"]
+        if(arg.lower() in joinables):
+            role = discord.utils.get(ctx.guild.roles, name=str(arg))
+            user = ctx.message.author
+            await user.add_roles(role)
+        elif(arg.lower()=="list"):
+            res = ""
+            for i in joinables:
+                res = res + "\n" + str(i)
+            await ctx.send(res)
 
-    '''
-    #JOIN
-# TODO Update command
-@client.command(pass_context=True)
-async def join(ctx,command:str):
-    joinables=["nsfw","nitain","catalyst","reactor"]
-    author = ctx.message.author
-    if command=="list":
-        res = ""
-        for i in joinables:
-            res = res + "\n" + str(i)
-        await client.say(res)
-    elif(command.lower() in joinables):
-        await client.add_roles(author, discord.utils.get(author.server.roles, name=command.lower()))
-#Leaves
-# TODO Update command
-@client.command(pass_context=True)
-async def leave(ctx,command:str):
-    joinables=["nsfw","nitain","catalyst","reactor"]
-    author = ctx.message.author
-    if command=="list":
-        res = ""
-        for i in joinables:
-            res = res + "\n" + str(i)
-        await client.say(res)
-    elif(command.lower() in joinables):
 
-       # Users[find(author)].removeRole(command.lower())
-        await client.remove_roles(author, discord.utils.get(author.server.roles, name=command.lower()))
+    @commands.command(name="leave",description="leave joinable",brief="leave <joinable>")
+    async def leave(self,ctx,arg="list"):
 
-    '''
+        joinables = ["nsfw", "nitain", "catalyst", "reactor"]
+        if(arg.lower() in joinables):
+            user = ctx.message.author
+            role = discord.utils.get(ctx.guild.roles, name=str(arg))
+            await user.remove_roles(role)
+        elif(arg.lower()=="list"):
+            res = ""
+            for i in joinables:
+                res = res + "\n" + str(i)
+            await ctx.send(res)
+
+
 def setup(client):
     client.add_cog(Basic(client))

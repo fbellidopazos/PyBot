@@ -42,7 +42,7 @@ def usersToString():
 @client.event
 async def on_ready():
     activity = discord.Game(name="with Space-Time")
-    await client.change_presence(status=discord.Status.idle, activity=activity)
+    await client.change_presence(status=discord.Status.online, activity=activity)
     print("Logged in as " + client.user.name)
 
 
