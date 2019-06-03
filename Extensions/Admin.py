@@ -16,11 +16,11 @@ class Admin(commands.Cog):
         try:
             self.bot.load_extension(cog)
         except Exception as e:
-            await ctx.send(f'**`ERROR:`** {type(e).__name__} - {e}')
+            await ctx.send(f'```prolog\nERROR:\n {type(e).__name__} - {e}```')
         else:
-            await ctx.send('**`SUCCESS`**')
+            await ctx.send('```prolog\nSUCCESS```')
 
-    @commands.command(name='unload', hidden=True)
+    @commands.command(name='unload')
     @commands.is_owner()
     async def unload(self, ctx, *, cog: str):
         """Command which Unloads a Module.
@@ -29,11 +29,11 @@ class Admin(commands.Cog):
         try:
             self.bot.unload_extension(cog)
         except Exception as e:
-            await ctx.send(f'**`ERROR:`** {type(e).__name__} - {e}')
+            await ctx.send(f'```prolog\nERROR:\n {type(e).__name__} - {e}```')
         else:
-            await ctx.send('**`SUCCESS`**')
+            await ctx.send('```prolog\nSUCCESS```')
 
-    @commands.command(name='reload', hidden=True)
+    @commands.command(name='reload')
     @commands.is_owner()
     async def reload(self, ctx, *, cog: str):
         """Command which Reloads a Module.
@@ -45,7 +45,7 @@ class Admin(commands.Cog):
         except Exception as e:
             await ctx.send(f'**`ERROR:`** {type(e).__name__} - {e}')
         else:
-            await ctx.send('```prolog\n**SUCCESS**```')
+            await ctx.send('```prolog\nSUCCESS```')
 
     @commands.command(name='clear',
                       description="clears messages(ADMIN ONLY)",

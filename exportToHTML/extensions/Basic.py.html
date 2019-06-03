@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>Basic.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #c792ea; font-style: italic;}
+.s1 { color: #eeffff;}
+.s2 { color: #89ddff;}
+.s3 { color: #c3e88d;}
+</style>
+</head>
+<body bgcolor="#212121">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Basic.py</font>
+</center></td></tr></table>
+<pre><span class="s0">from </span><span class="s1">discord</span><span class="s2">.</span><span class="s1">ext </span><span class="s0">import </span><span class="s1">commands</span>
+<span class="s0">import </span><span class="s1">discord</span>
+<span class="s0">import </span><span class="s1">random</span>
+
+<span class="s0">class </span><span class="s1">Basic</span><span class="s2">(</span><span class="s1">commands</span><span class="s2">.</span><span class="s1">Cog</span><span class="s2">):</span>
+    <span class="s0">def </span><span class="s1">___init___</span><span class="s2">(</span><span class="s1">self</span><span class="s2">,</span><span class="s1">client</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">client </span><span class="s2">= </span><span class="s1">client</span>
+    <span class="s2">@</span><span class="s1">commands</span><span class="s2">.</span><span class="s1">command</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s3">'hello'</span><span class="s2">, </span><span class="s1">description</span><span class="s2">=</span><span class="s3">&quot;Says hello&quot;</span><span class="s2">, </span><span class="s1">brief</span><span class="s2">=</span><span class="s3">&quot;Hello&quot;</span><span class="s2">,</span>
+                      <span class="s1">aliases</span><span class="s2">=[</span><span class="s3">'hi'</span><span class="s2">, </span><span class="s3">'ping'</span><span class="s2">, </span><span class="s3">'hey'</span><span class="s2">])</span>
+    <span class="s0">async def </span><span class="s1">hello</span><span class="s2">(</span><span class="s1">self</span><span class="s2">,</span><span class="s1">ctx</span><span class="s2">):</span>
+        <span class="s1">hellos </span><span class="s2">= [</span><span class="s3">&quot;Hello&quot;</span><span class="s2">, </span><span class="s3">&quot;Wazzap!!!&quot;</span><span class="s2">, </span><span class="s3">&quot;May the 4th be with You,&quot;</span><span class="s2">, </span><span class="s3">&quot;A bit late...&quot;</span><span class="s2">, </span><span class="s3">&quot;Goodnight!&quot;</span><span class="s2">]</span>
+        <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s1">random</span><span class="s2">.</span><span class="s1">choice</span><span class="s2">(</span><span class="s1">hellos</span><span class="s2">) + </span><span class="s3">&quot;{}&quot;</span><span class="s2">.</span><span class="s1">format</span><span class="s2">(</span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">message</span><span class="s2">.</span><span class="s1">author</span><span class="s2">.</span><span class="s1">mention</span><span class="s2">))</span>
+
+    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">command</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s3">'8ball'</span><span class="s2">, </span><span class="s1">description</span><span class="s2">=</span><span class="s3">&quot;Answers a yes/no question.&quot;</span><span class="s2">, </span><span class="s1">brief</span><span class="s2">=</span><span class="s3">&quot;Answers from the beyond.&quot;</span><span class="s2">,</span>
+                      <span class="s1">aliases</span><span class="s2">=[</span><span class="s3">'eight_ball'</span><span class="s2">, </span><span class="s3">'eightball'</span><span class="s2">, </span><span class="s3">'8-ball'</span><span class="s2">])</span>
+    <span class="s0">async def </span><span class="s1">eight_ball</span><span class="s2">(</span><span class="s1">self</span><span class="s2">,</span><span class="s1">ctx</span><span class="s2">):</span>
+        <span class="s1">possible_responses </span><span class="s2">= [</span><span class="s3">&quot;It is certain.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;It is decidedly so.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;Without a doubt.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;Yes - definitely.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;You may rely on it.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;As I see it, yes.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;Most likely.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;Outlook good.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;Yes.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;Signs point to yes.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;Reply hazy, try again.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;Ask again later.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;Better not tell you now.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;Cannot predict now.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;Concentrate and ask again.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;Don't count on it.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;My reply is no.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;My sources say no.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;Outlook not so good.&quot;</span><span class="s2">,</span>
+                              <span class="s3">&quot;Very doubtful.&quot;</span><span class="s2">]</span>
+        <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s1">random</span><span class="s2">.</span><span class="s1">choice</span><span class="s2">(</span><span class="s1">possible_responses</span><span class="s2">) + </span><span class="s3">&quot;, &quot; </span><span class="s2">+ </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">message</span><span class="s2">.</span><span class="s1">author</span><span class="s2">.</span><span class="s1">mention</span><span class="s2">)</span>
+
+
+
+    <span class="s3">''' 
+    #JOIN 
+# TODO Update command 
+@client.command(pass_context=True) 
+async def join(ctx,command:str): 
+    joinables=[&quot;nsfw&quot;,&quot;nitain&quot;,&quot;catalyst&quot;,&quot;reactor&quot;] 
+    author = ctx.message.author 
+    if command==&quot;list&quot;: 
+        res = &quot;&quot; 
+        for i in joinables: 
+            res = res + &quot;</span><span class="s2">\n</span><span class="s3">&quot; + str(i) 
+        await client.say(res) 
+    elif(command.lower() in joinables): 
+        await client.add_roles(author, discord.utils.get(author.server.roles, name=command.lower())) 
+#Leaves 
+# TODO Update command 
+@client.command(pass_context=True) 
+async def leave(ctx,command:str): 
+    joinables=[&quot;nsfw&quot;,&quot;nitain&quot;,&quot;catalyst&quot;,&quot;reactor&quot;] 
+    author = ctx.message.author 
+    if command==&quot;list&quot;: 
+        res = &quot;&quot; 
+        for i in joinables: 
+            res = res + &quot;</span><span class="s2">\n</span><span class="s3">&quot; + str(i) 
+        await client.say(res) 
+    elif(command.lower() in joinables): 
+ 
+       # Users[find(author)].removeRole(command.lower()) 
+        await client.remove_roles(author, discord.utils.get(author.server.roles, name=command.lower())) 
+ 
+    '''</span>
+<span class="s0">def </span><span class="s1">setup</span><span class="s2">(</span><span class="s1">client</span><span class="s2">):</span>
+    <span class="s1">client</span><span class="s2">.</span><span class="s1">add_cog</span><span class="s2">(</span><span class="s1">Basic</span><span class="s2">(</span><span class="s1">client</span><span class="s2">))</span></pre>
+</body>
+</html>

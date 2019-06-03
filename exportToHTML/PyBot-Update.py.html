@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>PyBot-Update.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #c792ea; font-style: italic;}
+.s1 { color: #eeffff;}
+.s2 { color: #89ddff;}
+.s3 { color: #c3e88d;}
+.s4 { color: #f78c6c;}
+.s5 { color: #616161; font-style: italic;}
+</style>
+</head>
+<body bgcolor="#212121">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+PyBot-Update.py</font>
+</center></td></tr></table>
+<pre><span class="s0">from </span><span class="s1">discord</span><span class="s2">.</span><span class="s1">ext </span><span class="s0">import </span><span class="s1">commands</span>
+<span class="s0">from </span><span class="s1">User </span><span class="s0">import </span><span class="s1">User</span>
+<span class="s0">import </span><span class="s1">discord</span>
+<span class="s0">import </span><span class="s1">pickle</span>
+<span class="s0">import </span><span class="s1">os</span>
+
+
+BOT_PREFIX <span class="s2">= (</span><span class="s3">&quot;.&quot;</span><span class="s2">, </span><span class="s3">&quot;&quot;</span><span class="s2">)</span>
+<span class="s1">client </span><span class="s2">= </span><span class="s1">commands</span><span class="s2">.</span><span class="s1">Bot</span><span class="s2">(</span><span class="s1">command_prefix</span><span class="s2">=</span><span class="s1">BOT_PREFIX</span><span class="s2">, </span><span class="s1">description</span><span class="s2">=</span><span class="s3">&quot;Discord Python Rewrite Bot&quot;</span><span class="s2">)</span>
+
+<span class="s1">Users </span><span class="s2">= []</span>
+
+
+<span class="s0">def </span><span class="s1">find</span><span class="s2">(</span><span class="s1">nick</span><span class="s2">):</span>
+    <span class="s1">res </span><span class="s2">= -</span><span class="s4">1</span>
+    <span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range</span><span class="s2">(</span><span class="s1">len</span><span class="s2">(</span><span class="s1">Users</span><span class="s2">)):</span>
+        <span class="s1">res </span><span class="s2">+= </span><span class="s4">1</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">Users</span><span class="s2">[</span><span class="s1">i</span><span class="s2">].</span><span class="s1">nick </span><span class="s2">== </span><span class="s1">nick</span><span class="s2">):</span>
+            <span class="s0">break</span>
+    return <span class="s1">res</span>
+
+
+<span class="s0">def </span><span class="s1">backUpPickle</span><span class="s2">():</span>
+    <span class="s1">f </span><span class="s2">= </span><span class="s1">open</span><span class="s2">(</span><span class="s3">&quot;Users.pkl&quot;</span><span class="s2">, </span><span class="s3">&quot;wb&quot;</span><span class="s2">)</span>
+    <span class="s1">pickle</span><span class="s2">.</span><span class="s1">dump</span><span class="s2">(</span><span class="s1">Users</span><span class="s2">, </span><span class="s1">f</span><span class="s2">)</span>
+    <span class="s1">f</span><span class="s2">.</span><span class="s1">close</span><span class="s2">()</span>
+
+
+<span class="s0">def </span><span class="s1">loadPickle</span><span class="s2">():</span>
+    <span class="s1">f </span><span class="s2">= </span><span class="s1">open</span><span class="s2">(</span><span class="s3">&quot;Users.pkl&quot;</span><span class="s2">, </span><span class="s3">&quot;rb&quot;</span><span class="s2">)</span>
+    <span class="s1">Users </span><span class="s2">= </span><span class="s1">pickle</span><span class="s2">.</span><span class="s1">load</span><span class="s2">(</span><span class="s1">f</span><span class="s2">)</span>
+    <span class="s1">f</span><span class="s2">.</span><span class="s1">close</span><span class="s2">()</span>
+
+
+<span class="s0">def </span><span class="s1">usersToString</span><span class="s2">():</span>
+    <span class="s1">res </span><span class="s2">= </span><span class="s3">&quot;&quot;</span>
+    <span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">Users</span><span class="s2">:</span>
+        <span class="s1">res </span><span class="s2">= </span><span class="s1">res </span><span class="s2">+ </span><span class="s1">i</span><span class="s2">.</span><span class="s1">toString</span><span class="s2">()</span>
+    <span class="s0">return </span><span class="s2">(</span><span class="s1">res</span><span class="s2">)</span>
+
+
+@<span class="s1">client</span><span class="s2">.</span><span class="s1">event</span>
+<span class="s0">async def </span><span class="s1">on_ready</span><span class="s2">():</span>
+    <span class="s1">activity </span><span class="s2">= </span><span class="s1">discord</span><span class="s2">.</span><span class="s1">Game</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s3">&quot;with Space-Time&quot;</span><span class="s2">)</span>
+    <span class="s0">await </span><span class="s1">client</span><span class="s2">.</span><span class="s1">change_presence</span><span class="s2">(</span><span class="s1">status</span><span class="s2">=</span><span class="s1">discord</span><span class="s2">.</span><span class="s1">Status</span><span class="s2">.</span><span class="s1">idle</span><span class="s2">, </span><span class="s1">activity</span><span class="s2">=</span><span class="s1">activity</span><span class="s2">)</span>
+    <span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Logged in as &quot; </span><span class="s2">+ </span><span class="s1">client</span><span class="s2">.</span><span class="s1">user</span><span class="s2">.</span><span class="s1">name</span><span class="s2">)</span>
+
+
+<span class="s5"># Member Join Action</span>
+<span class="s2">@</span><span class="s1">client</span><span class="s2">.</span><span class="s1">event</span>
+<span class="s0">async def </span><span class="s1">on_member_join</span><span class="s2">(</span><span class="s1">ctx</span><span class="s2">,</span><span class="s1">member</span><span class="s2">):</span>
+    <span class="s1">a </span><span class="s2">= </span><span class="s1">User</span><span class="s2">(</span><span class="s1">member</span><span class="s2">, </span><span class="s1">member</span><span class="s2">.</span><span class="s1">display_name</span><span class="s2">, </span><span class="s3">&quot;Regular&quot;</span><span class="s2">)</span>
+    <span class="s5"># Users.append(a)</span>
+    # backUpPickle()
+    <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">author</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s1">member</span><span class="s2">, </span><span class="s3">&quot;```prolog</span><span class="s2">\n</span><span class="s3">Welcome to The Quantum Enlightenment.&quot; </span><span class="s2">+</span>
+                              <span class="s3">&quot;</span><span class="s2">\n</span><span class="s3">==========================================</span><span class="s2">\n</span><span class="s3">&quot; </span><span class="s2">+</span>
+                              <span class="s3">&quot;The following rules you must know:</span><span class="s2">\n</span><span class="s3">&quot; </span><span class="s2">+</span>
+                              <span class="s3">&quot;RULES</span><span class="s2">\n\n</span><span class="s3">The following Commands you may use in *BOT_SPAM*:</span><span class="s2">\n</span><span class="s3">Commands</span><span class="s2">\n</span><span class="s3">```&quot;</span><span class="s2">)</span>
+    <span class="s3">''' 
+    Welcome to The Quantum Enlightenment. 
+    ========================================== 
+    The following rules you must know: 
+    --RULES-- 
+     
+    The following Commands you may use in *BOT_SPAM*: 
+    --COMMANDS--     
+    '''</span>
+    <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">author</span><span class="s2">.</span><span class="s1">add_role</span><span class="s2">(</span><span class="s1">member</span><span class="s2">, </span><span class="s1">discord</span><span class="s2">.</span><span class="s1">utils</span><span class="s2">.</span><span class="s1">get</span><span class="s2">(</span><span class="s1">member</span><span class="s2">.</span><span class="s1">server</span><span class="s2">.</span><span class="s1">roles</span><span class="s2">, </span><span class="s1">name</span><span class="s2">=</span><span class="s3">&quot;Regular&quot;</span><span class="s2">))</span>
+
+
+<span class="s5"># Member Remove Action</span>
+<span class="s2">@</span><span class="s1">client</span><span class="s2">.</span><span class="s1">event</span>
+<span class="s0">async def </span><span class="s1">on_member_remove</span><span class="s2">(</span><span class="s1">ctx</span><span class="s2">,</span><span class="s1">member</span><span class="s2">):</span>
+    <span class="s1">Users</span><span class="s2">.</span><span class="s1">remove</span><span class="s2">(</span><span class="s1">find</span><span class="s2">(</span><span class="s1">member</span><span class="s2">.</span><span class="s1">display_name</span><span class="s2">))</span>
+    <span class="s1">backUpPickle</span><span class="s2">()</span>
+    <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">author</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s1">member</span><span class="s2">,</span><span class="s3">&quot;You have left The Quantum Enlightenment.</span><span class="s2">\n</span><span class="s3">May the Force be with you&quot;</span><span class="s2">)</span>
+
+
+<span class="s5"># Run BOT-TOKEN</span>
+<span class="s0">for </span><span class="s1">filename </span><span class="s0">in </span><span class="s1">os</span><span class="s2">.</span><span class="s1">listdir</span><span class="s2">(</span><span class="s3">'./extensions'</span><span class="s2">):</span>
+    <span class="s0">if </span><span class="s1">filename</span><span class="s2">.</span><span class="s1">endswith</span><span class="s2">(</span><span class="s3">'.py'</span><span class="s2">):</span>
+        <span class="s1">client</span><span class="s2">.</span><span class="s1">load_extension</span><span class="s2">(</span><span class="s3">f'extensions.</span><span class="s2">{</span><span class="s1">filename</span><span class="s2">[:-</span><span class="s4">3</span><span class="s2">]}</span><span class="s3">'</span><span class="s2">)</span>
+
+<span class="s1">client</span><span class="s2">.</span><span class="s1">run</span><span class="s2">(</span><span class="s3">'NDgyMTQ3NDM4MTE1Njg0MzYz.D3IkHg.pbRBXPTxphZUY1LwjA_gAp762qg'</span><span class="s2">)</span>
+</pre>
+</body>
+</html>

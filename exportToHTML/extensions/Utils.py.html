@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Utils.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #c792ea; font-style: italic;}
+.s1 { color: #eeffff;}
+.s2 { color: #89ddff;}
+.s3 { color: #c3e88d;}
+.s4 { color: #f78c6c;}
+</style>
+</head>
+<body bgcolor="#212121">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Utils.py</font>
+</center></td></tr></table>
+<pre><span class="s0">from </span><span class="s1">discord</span><span class="s2">.</span><span class="s1">ext </span><span class="s0">import </span><span class="s1">commands</span>
+<span class="s0">from </span><span class="s1">bs4 </span><span class="s0">import </span><span class="s1">BeautifulSoup</span>
+<span class="s0">import </span><span class="s1">requests</span>
+<span class="s0">import </span><span class="s1">praw</span>
+<span class="s0">import </span><span class="s1">random</span>
+
+reddit <span class="s2">= </span><span class="s1">praw</span><span class="s2">.</span><span class="s1">Reddit</span><span class="s2">(</span><span class="s1">client_id</span><span class="s2">=</span><span class="s3">'StI7zL-mxlm2HQ'</span><span class="s2">,</span>
+                             <span class="s1">client_secret</span><span class="s2">=</span><span class="s3">'lUkCF66UgqEJgE03JkkAkXWQzKA'</span><span class="s2">,</span>
+                             <span class="s1">user_agent</span><span class="s2">=</span><span class="s3">'PyBotNSFW'</span><span class="s2">)</span>
+
+<span class="s0">class </span><span class="s1">Utils</span><span class="s2">(</span><span class="s1">commands</span><span class="s2">.</span><span class="s1">Cog</span><span class="s2">):</span>
+    <span class="s0">def </span><span class="s1">___init___</span><span class="s2">(</span><span class="s1">self</span><span class="s2">,</span><span class="s1">client</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">client </span><span class="s2">= </span><span class="s1">client</span>
+
+    <span class="s2">@</span><span class="s1">commands</span><span class="s2">.</span><span class="s1">command</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s3">'ud'</span><span class="s2">,</span>
+                <span class="s1">description</span><span class="s2">=</span><span class="s3">&quot;Gives the definition of the input word,searched in Urban Dictionary&quot;</span><span class="s2">,</span>
+                <span class="s1">brief</span><span class="s2">=</span><span class="s3">&quot;ud &lt;word&gt;&quot;</span><span class="s2">)</span>
+    <span class="s0">async def </span><span class="s1">urban</span><span class="s2">(</span><span class="s1">self</span><span class="s2">,</span><span class="s1">ctx</span><span class="s2">, </span><span class="s1">word</span><span class="s2">):</span>
+        <span class="s1">source </span><span class="s2">= </span><span class="s1">requests</span><span class="s2">.</span><span class="s1">get</span><span class="s2">(</span><span class="s3">&quot;http://www.urbandictionary.com/define.php?term={}&quot;</span><span class="s2">.</span><span class="s1">format</span><span class="s2">(</span><span class="s1">word</span><span class="s2">))</span>
+        <span class="s1">soup </span><span class="s2">= </span><span class="s1">BeautifulSoup</span><span class="s2">(</span><span class="s1">source</span><span class="s2">.</span><span class="s1">content</span><span class="s2">, </span><span class="s3">&quot;html.parser&quot;</span><span class="s2">)</span>
+        <span class="s1">msg </span><span class="s2">= </span><span class="s1">soup</span><span class="s2">.</span><span class="s1">find</span><span class="s2">(</span><span class="s3">&quot;div&quot;</span><span class="s2">,</span><span class="s1">attrs</span><span class="s2">={</span><span class="s3">&quot;class&quot;</span><span class="s2">:</span><span class="s3">&quot;meaning&quot;</span><span class="s2">}).</span><span class="s1">text</span>
+        <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s1">str</span><span class="s2">(</span><span class="s1">msg</span><span class="s2">))</span>
+
+    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">command</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s3">'wolfram'</span><span class="s2">,</span>
+                      <span class="s1">description</span><span class="s2">=</span><span class="s3">&quot;Wolfram Alpha search&quot;</span><span class="s2">,</span>
+                      <span class="s1">brief</span><span class="s2">=</span><span class="s3">&quot;wolfram &lt;query&gt;&quot;</span><span class="s2">)</span>
+    <span class="s0">async def </span><span class="s1">wolfram</span><span class="s2">(</span><span class="s1">self</span><span class="s2">,</span><span class="s1">ctx</span><span class="s2">, *,</span><span class="s1">query</span><span class="s2">):</span>
+        <span class="s1">url </span><span class="s2">= </span><span class="s3">'http://api.wolframalpha.com/v1/simple?appid=UQ2PAA-Y2QK6KVRA9&amp;i={}'</span><span class="s2">.</span><span class="s1">format</span><span class="s2">(</span>
+            (<span class="s1">query</span><span class="s2">.</span><span class="s1">replace</span><span class="s2">(</span><span class="s3">&quot; &quot;</span><span class="s2">, </span><span class="s3">&quot;%20&quot;</span><span class="s2">)).</span><span class="s1">replace</span><span class="s2">(</span><span class="s3">&quot;+&quot;</span><span class="s2">, </span><span class="s3">&quot;%2B&quot;</span><span class="s2">))</span>
+        <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s1">url</span><span class="s2">)</span>
+
+
+    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">command</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s3">'nsfw'</span><span class="s2">,</span>
+                    <span class="s1">description</span><span class="s2">=</span><span class="s3">&quot;Basically PORN&quot;</span><span class="s2">,</span>
+                    <span class="s1">brief</span><span class="s2">=</span><span class="s3">&quot;command: nsfw&quot;</span><span class="s2">)</span>
+    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">has_role</span><span class="s2">(</span><span class="s3">&quot;nsfw&quot;</span><span class="s2">)</span>
+    <span class="s0">async def </span><span class="s1">nsfw</span><span class="s2">(</span><span class="s1">self</span><span class="s2">,</span><span class="s1">ctx</span><span class="s2">,</span><span class="s1">amount</span><span class="s2">=</span><span class="s4">1</span><span class="s2">):</span>
+        <span class="s1">nsfw </span><span class="s2">= </span><span class="s1">reddit</span><span class="s2">.</span><span class="s1">subreddit</span><span class="s2">(</span><span class="s3">'nsfw+RealGirls+LegalTeens+Boobies+palegirls+redheads+ginger+Hotchickswithtattoos+bodyperfection+PrettyGirls+suicidegirls+goddesses+altgonewild+HighResNSFW+BonerMaterial+nsfw2+SexyFrex+boobs+lingerie+sexygirls+SnowWhites+iWantToFuckHer+SexyButNotPorn+fortyfivefiftyfive+braceface+JustHotWomen+thinspo+stripgirls+Page3Glamour+Playboy+GifsOfRemoval+wet+barelylegalteens+SceneGirls+NSFW_nospam+AlbumBabes+B_Cups+shewantstofuck+Barelylegal+girlsdoingnerdythings+classysexy+Sexy+NSFW_Wallpapers+PantyPeel+UHDnsfw+peachfuzz+UnrealGirls+FuckingPerfect+redhead+TheHottestBabes+slimgirls+primes+skivvies+THEGOLDSTANDARD+SoHotItHurts+nsfw_hd+18_20+18nsfw+Hotness+BareGirls+redlingerie+Perfect_NSFW+OnlyGoodPorn+fyeahsexyteens+AmazingTeens+fuckyeahsexyteens+HotGirls+paleskin+Babes+BetterThanPorn+nsfwnonporn+countrygirls+Playboy_Albums+realperfection+TeaGirls+ThinChicksWithTits+hq_nsfw+Straps+GorgeousGirlsNSFW+DomesticGirls+RealBeauties+Sexyness+StrippingOffShirts+RiaeSuicide+nsfw_bw+nsfw_sexy_girls+BacklitBeauty+SexyGoosebumps+tattooed_redheads+Bangable+TotalBabes+BikiniTeens+Headless+Randomgirls+HotGirlsNSFW+sexynsfw+Adultpics+debs_and_doxies+nsfwonly+nsfwnew'</span><span class="s2">).</span><span class="s1">hot</span><span class="s2">()</span>
+        <span class="s1">post_to_pick </span><span class="s2">= </span><span class="s1">random</span><span class="s2">.</span><span class="s1">randint</span><span class="s2">(</span><span class="s4">1</span><span class="s2">, </span><span class="s4">30</span><span class="s2">)</span>
+        <span class="s1">channel</span><span class="s2">=</span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">bot</span><span class="s2">.</span><span class="s1">get_channel</span><span class="s2">(</span><span class="s4">461240565980463128</span><span class="s2">)</span>
+        <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">channel</span><span class="s2">.</span><span class="s1">purge</span><span class="s2">(</span><span class="s1">limit</span><span class="s2">=</span><span class="s4">1</span><span class="s2">)</span>
+        <span class="s0">while </span><span class="s1">amount </span><span class="s2">&gt; </span><span class="s4">0</span><span class="s2">:</span>
+            <span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range</span><span class="s2">(</span><span class="s4">0</span><span class="s2">, </span><span class="s1">post_to_pick</span><span class="s2">):</span>
+                <span class="s1">submission </span><span class="s2">= </span><span class="s1">next</span><span class="s2">(</span><span class="s1">x </span><span class="s0">for </span><span class="s1">x </span><span class="s0">in </span><span class="s1">nsfw </span><span class="s0">if not </span><span class="s1">x</span><span class="s2">.</span><span class="s1">stickied</span><span class="s2">)</span>
+            <span class="s0">await </span><span class="s1">channel</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s1">submission</span><span class="s2">.</span><span class="s1">url</span><span class="s2">)</span>
+            <span class="s1">amount </span><span class="s2">-= </span><span class="s4">1</span>
+
+
+<span class="s0">def </span><span class="s1">setup</span><span class="s2">(</span><span class="s1">client</span><span class="s2">):</span>
+    <span class="s1">client</span><span class="s2">.</span><span class="s1">add_cog</span><span class="s2">(</span><span class="s1">Utils</span><span class="s2">(</span><span class="s1">client</span><span class="s2">))</span>
+</pre>
+</body>
+</html>

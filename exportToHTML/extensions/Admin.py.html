@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>Admin.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #c792ea; font-style: italic;}
+.s1 { color: #eeffff;}
+.s2 { color: #89ddff;}
+.s3 { color: #616161; font-style: italic;}
+.s4 { color: #c3e88d;}
+.s5 { color: #f78c6c;}
+</style>
+</head>
+<body bgcolor="#212121">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Admin.py</font>
+</center></td></tr></table>
+<pre><span class="s0">from </span><span class="s1">discord</span><span class="s2">.</span><span class="s1">ext </span><span class="s0">import </span><span class="s1">commands</span>
+
+
+<span class="s0">class </span><span class="s1">Admin</span><span class="s2">(</span><span class="s1">commands</span><span class="s2">.</span><span class="s1">Cog</span><span class="s2">):</span>
+
+    <span class="s0">def </span><span class="s1">__init__</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">bot</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">bot </span><span class="s2">= </span><span class="s1">bot</span>
+
+    <span class="s3"># Hidden means it won't show up on the default help.</span>
+    <span class="s2">@</span><span class="s1">commands</span><span class="s2">.</span><span class="s1">command</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s4">'load'</span><span class="s2">, </span><span class="s1">hidden</span><span class="s2">=</span><span class="s0">True</span><span class="s2">)</span>
+    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">is_owner</span><span class="s2">()</span>
+    <span class="s0">async def </span><span class="s1">load</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">ctx</span><span class="s2">, *, </span><span class="s1">cog</span><span class="s2">: </span><span class="s1">str</span><span class="s2">):</span>
+        <span class="s3">&quot;&quot;&quot;Command which Loads a Module. 
+        Remember to use dot path. e.g: cogs.owner&quot;&quot;&quot;</span>
+
+        <span class="s0">try</span><span class="s2">:</span>
+            <span class="s1">self</span><span class="s2">.</span><span class="s1">bot</span><span class="s2">.</span><span class="s1">load_extension</span><span class="s2">(</span><span class="s1">cog</span><span class="s2">)</span>
+        <span class="s0">except </span><span class="s1">Exception </span><span class="s0">as </span><span class="s1">e</span><span class="s2">:</span>
+            <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s4">f'```prolog</span><span class="s2">\n</span><span class="s4">ERROR:</span><span class="s2">\n {</span><span class="s1">type</span><span class="s2">(</span><span class="s1">e</span><span class="s2">).</span><span class="s1">__name__</span><span class="s2">} </span><span class="s4">- </span><span class="s2">{</span><span class="s1">e</span><span class="s2">}</span><span class="s4">```'</span><span class="s2">)</span>
+        <span class="s0">else</span><span class="s2">:</span>
+            <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s4">'```prolog</span><span class="s2">\n</span><span class="s4">SUCCESS```'</span><span class="s2">)</span>
+
+    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">command</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s4">'unload'</span><span class="s2">)</span>
+    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">is_owner</span><span class="s2">()</span>
+    <span class="s0">async def </span><span class="s1">unload</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">ctx</span><span class="s2">, *, </span><span class="s1">cog</span><span class="s2">: </span><span class="s1">str</span><span class="s2">):</span>
+        <span class="s3">&quot;&quot;&quot;Command which Unloads a Module. 
+        Remember to use dot path. e.g: cogs.owner&quot;&quot;&quot;</span>
+
+        <span class="s0">try</span><span class="s2">:</span>
+            <span class="s1">self</span><span class="s2">.</span><span class="s1">bot</span><span class="s2">.</span><span class="s1">unload_extension</span><span class="s2">(</span><span class="s1">cog</span><span class="s2">)</span>
+        <span class="s0">except </span><span class="s1">Exception </span><span class="s0">as </span><span class="s1">e</span><span class="s2">:</span>
+            <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s4">f'```prolog</span><span class="s2">\n</span><span class="s4">ERROR:</span><span class="s2">\n {</span><span class="s1">type</span><span class="s2">(</span><span class="s1">e</span><span class="s2">).</span><span class="s1">__name__</span><span class="s2">} </span><span class="s4">- </span><span class="s2">{</span><span class="s1">e</span><span class="s2">}</span><span class="s4">```'</span><span class="s2">)</span>
+        <span class="s0">else</span><span class="s2">:</span>
+            <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s4">'```prolog</span><span class="s2">\n</span><span class="s4">SUCCESS```'</span><span class="s2">)</span>
+
+    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">command</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s4">'reload'</span><span class="s2">)</span>
+    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">is_owner</span><span class="s2">()</span>
+    <span class="s0">async def </span><span class="s1">reload</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">ctx</span><span class="s2">, *, </span><span class="s1">cog</span><span class="s2">: </span><span class="s1">str</span><span class="s2">):</span>
+        <span class="s3">&quot;&quot;&quot;Command which Reloads a Module. 
+        Remember to use dot path. e.g: cogs.owner&quot;&quot;&quot;</span>
+
+        <span class="s0">try</span><span class="s2">:</span>
+            <span class="s1">self</span><span class="s2">.</span><span class="s1">bot</span><span class="s2">.</span><span class="s1">unload_extension</span><span class="s2">(</span><span class="s1">cog</span><span class="s2">)</span>
+            <span class="s1">self</span><span class="s2">.</span><span class="s1">bot</span><span class="s2">.</span><span class="s1">load_extension</span><span class="s2">(</span><span class="s1">cog</span><span class="s2">)</span>
+        <span class="s0">except </span><span class="s1">Exception </span><span class="s0">as </span><span class="s1">e</span><span class="s2">:</span>
+            <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s4">f'**`ERROR:`** </span><span class="s2">{</span><span class="s1">type</span><span class="s2">(</span><span class="s1">e</span><span class="s2">).</span><span class="s1">__name__</span><span class="s2">} </span><span class="s4">- </span><span class="s2">{</span><span class="s1">e</span><span class="s2">}</span><span class="s4">'</span><span class="s2">)</span>
+        <span class="s0">else</span><span class="s2">:</span>
+            <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s4">'```prolog</span><span class="s2">\n</span><span class="s4">SUCCESS```'</span><span class="s2">)</span>
+
+    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">command</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s4">'clear'</span><span class="s2">,</span>
+                      <span class="s1">description</span><span class="s2">=</span><span class="s4">&quot;clears messages(ADMIN ONLY)&quot;</span><span class="s2">,</span>
+                      <span class="s1">brief</span><span class="s2">=</span><span class="s4">&quot;clear &lt;Integer&gt;&quot;</span><span class="s2">)</span>
+    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">has_role</span><span class="s2">(</span><span class="s4">&quot;Staff&quot;</span><span class="s2">)</span>
+    <span class="s0">async def </span><span class="s1">clear</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">ctx</span><span class="s2">, </span><span class="s1">amount</span><span class="s2">=</span><span class="s5">1</span><span class="s2">):</span>
+        <span class="s1">limit</span><span class="s2">=</span><span class="s1">amount</span>
+        <span class="s0">if</span><span class="s2">(</span><span class="s1">amount</span><span class="s2">&lt;=</span><span class="s5">0</span><span class="s2">):</span>
+            <span class="s1">limit</span><span class="s2">=</span><span class="s5">0</span>
+        <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">channel</span><span class="s2">.</span><span class="s1">purge</span><span class="s2">(</span><span class="s1">limit</span><span class="s2">=</span><span class="s1">limit </span><span class="s2">+ </span><span class="s5">1</span><span class="s2">)</span>
+
+<span class="s0">def </span><span class="s1">setup</span><span class="s2">(</span><span class="s1">bot</span><span class="s2">):</span>
+    <span class="s1">bot</span><span class="s2">.</span><span class="s1">add_cog</span><span class="s2">(</span><span class="s1">Admin</span><span class="s2">(</span><span class="s1">bot</span><span class="s2">))</span></pre>
+</body>
+</html>

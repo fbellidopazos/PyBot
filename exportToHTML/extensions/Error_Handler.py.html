@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Error_Handler.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #c792ea; font-style: italic;}
+.s1 { color: #eeffff;}
+.s2 { color: #89ddff;}
+.s3 { color: #616161; font-style: italic;}
+.s4 { color: #c3e88d;}
+</style>
+</head>
+<body bgcolor="#212121">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Error_Handler.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">traceback</span>
+<span class="s0">import </span><span class="s1">sys</span>
+<span class="s0">from </span><span class="s1">discord</span><span class="s2">.</span><span class="s1">ext </span><span class="s0">import </span><span class="s1">commands</span>
+<span class="s0">import </span><span class="s1">discord</span>
+
+
+<span class="s0">class </span><span class="s1">CommandErrorHandler</span><span class="s2">(</span><span class="s1">commands</span><span class="s2">.</span><span class="s1">Cog</span><span class="s2">):</span>
+    <span class="s0">def </span><span class="s1">__init__</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">bot</span><span class="s2">):</span>
+        <span class="s1">self</span><span class="s2">.</span><span class="s1">bot </span><span class="s2">= </span><span class="s1">bot</span>
+
+    <span class="s2">@</span><span class="s1">commands</span><span class="s2">.</span><span class="s1">Cog</span><span class="s2">.</span><span class="s1">listener</span><span class="s2">()</span>
+    <span class="s0">async def </span><span class="s1">on_command_error</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">ctx</span><span class="s2">, </span><span class="s1">error</span><span class="s2">):</span>
+        <span class="s3">&quot;&quot;&quot;The event triggered when an error is raised while invoking a command. 
+        ctx   : Context 
+        error : Exception&quot;&quot;&quot;</span>
+
+        <span class="s0">if </span><span class="s1">hasattr</span><span class="s2">(</span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">command</span><span class="s2">, </span><span class="s4">'on_error'</span><span class="s2">):</span>
+            <span class="s0">return</span>
+
+        <span class="s1">ignored </span><span class="s2">= (</span><span class="s1">commands</span><span class="s2">.</span><span class="s1">UserInputError</span><span class="s2">)</span>
+        <span class="s1">error </span><span class="s2">= </span><span class="s1">getattr</span><span class="s2">(</span><span class="s1">error</span><span class="s2">, </span><span class="s4">'original'</span><span class="s2">, </span><span class="s1">error</span><span class="s2">)</span>
+
+        <span class="s0">if </span><span class="s1">isinstance</span><span class="s2">(</span><span class="s1">error</span><span class="s2">, </span><span class="s1">ignored</span><span class="s2">):</span>
+            <span class="s0">return</span>
+
+        elif <span class="s1">isinstance</span><span class="s2">(</span><span class="s1">error</span><span class="s2">, </span><span class="s1">commands</span><span class="s2">.</span><span class="s1">DisabledCommand</span><span class="s2">):</span>
+            <span class="s0">return await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s4">f'</span><span class="s2">{</span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">command</span><span class="s2">} </span><span class="s4">has been disabled.'</span><span class="s2">)</span>
+
+        <span class="s0">elif </span><span class="s1">isinstance</span><span class="s2">(</span><span class="s1">error</span><span class="s2">, </span><span class="s1">commands</span><span class="s2">.</span><span class="s1">NoPrivateMessage</span><span class="s2">):</span>
+            <span class="s0">try</span><span class="s2">:</span>
+                <span class="s0">return await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">author</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s4">f'</span><span class="s2">{</span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">command</span><span class="s2">} </span><span class="s4">can not be used in Private Messages.'</span><span class="s2">)</span>
+            <span class="s0">except</span><span class="s2">:</span>
+                <span class="s0">pass</span>
+
+        elif <span class="s1">isinstance</span><span class="s2">(</span><span class="s1">error</span><span class="s2">, </span><span class="s1">commands</span><span class="s2">.</span><span class="s1">BadArgument</span><span class="s2">):</span>
+            <span class="s0">if </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">command</span><span class="s2">.</span><span class="s1">qualified_name </span><span class="s2">== </span><span class="s4">'tag list'</span><span class="s2">:</span>
+                <span class="s0">return await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s4">'I could not find that member. Please try again.'</span><span class="s2">)</span>
+
+        <span class="s0">elif </span><span class="s1">isinstance</span><span class="s2">(</span><span class="s1">error</span><span class="s2">, </span><span class="s1">commands</span><span class="s2">.</span><span class="s1">CommandNotFound</span><span class="s2">):</span>
+            <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s4">&quot;Sorry the command does not exist.</span><span class="s2">\n</span><span class="s4">Say </span><span class="s2">\'</span><span class="s4">help</span><span class="s2">\' </span><span class="s4">to get the commands&quot;</span><span class="s2">)</span>
+            
+
+        <span class="s1">print</span><span class="s2">(</span><span class="s4">'Ignoring exception in command {}:'</span><span class="s2">.</span><span class="s1">format</span><span class="s2">(</span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">command</span><span class="s2">), </span><span class="s1">file</span><span class="s2">=</span><span class="s1">sys</span><span class="s2">.</span><span class="s1">stderr</span><span class="s2">)</span>
+        <span class="s1">traceback</span><span class="s2">.</span><span class="s1">print_exception</span><span class="s2">(</span><span class="s1">type</span><span class="s2">(</span><span class="s1">error</span><span class="s2">), </span><span class="s1">error</span><span class="s2">, </span><span class="s1">error</span><span class="s2">.</span><span class="s1">__traceback__</span><span class="s2">, </span><span class="s1">file</span><span class="s2">=</span><span class="s1">sys</span><span class="s2">.</span><span class="s1">stderr</span><span class="s2">)</span>
+
+    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">command</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s4">'repeat'</span><span class="s2">, </span><span class="s1">aliases</span><span class="s2">=[</span><span class="s4">'mimic'</span><span class="s2">, </span><span class="s4">'copy'</span><span class="s2">])</span>
+    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">is_owner</span><span class="s2">()</span>
+    <span class="s0">async def </span><span class="s1">do_repeat</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">ctx</span><span class="s2">, *, </span><span class="s1">inp</span><span class="s2">: </span><span class="s1">str</span><span class="s2">):</span>
+        <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s1">inp</span><span class="s2">)</span>
+
+    @<span class="s1">do_repeat</span><span class="s2">.</span><span class="s1">error</span>
+    <span class="s0">async def </span><span class="s1">do_repeat_handler</span><span class="s2">(</span><span class="s1">self</span><span class="s2">, </span><span class="s1">ctx</span><span class="s2">, </span><span class="s1">error</span><span class="s2">):</span>
+        <span class="s0">if </span><span class="s1">isinstance</span><span class="s2">(</span><span class="s1">error</span><span class="s2">, </span><span class="s1">commands</span><span class="s2">.</span><span class="s1">MissingRequiredArgument</span><span class="s2">):</span>
+            <span class="s0">if </span><span class="s1">error</span><span class="s2">.</span><span class="s1">param</span><span class="s2">.</span><span class="s1">name </span><span class="s2">== </span><span class="s4">'inp'</span><span class="s2">:</span>
+                <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s4">&quot;You forgot to give me input to repeat!&quot;</span><span class="s2">)</span>
+
+
+<span class="s0">def </span><span class="s1">setup</span><span class="s2">(</span><span class="s1">bot</span><span class="s2">):</span>
+    <span class="s1">bot</span><span class="s2">.</span><span class="s1">add_cog</span><span class="s2">(</span><span class="s1">CommandErrorHandler</span><span class="s2">(</span><span class="s1">bot</span><span class="s2">))</span></pre>
+</body>
+</html>

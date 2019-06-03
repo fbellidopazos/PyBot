@@ -39,7 +39,7 @@ class Utils(commands.Cog):
         post_to_pick = random.randint(1, 30)
         channel=ctx.bot.get_channel(461240565980463128)
         await ctx.channel.purge(limit=1)
-        while amount != 0:
+        while amount > 0:
             for i in range(0, post_to_pick):
                 submission = next(x for x in nsfw if not x.stickied)
             await channel.send(submission.url)
