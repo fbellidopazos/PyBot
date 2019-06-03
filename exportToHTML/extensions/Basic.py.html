@@ -7,6 +7,7 @@
 .s1 { color: #eeffff;}
 .s2 { color: #89ddff;}
 .s3 { color: #c3e88d;}
+.ln { color: #424242; font-weight: normal; font-style: normal; }
 </style>
 </head>
 <body bgcolor="#212121">
@@ -15,78 +16,80 @@
 <font face="Arial, Helvetica" color="#000000">
 Basic.py</font>
 </center></td></tr></table>
-<pre><span class="s0">from </span><span class="s1">discord</span><span class="s2">.</span><span class="s1">ext </span><span class="s0">import </span><span class="s1">commands</span>
-<span class="s0">import </span><span class="s1">discord</span>
-<span class="s0">import </span><span class="s1">random</span>
-
-<span class="s0">class </span><span class="s1">Basic</span><span class="s2">(</span><span class="s1">commands</span><span class="s2">.</span><span class="s1">Cog</span><span class="s2">):</span>
-    <span class="s0">def </span><span class="s1">___init___</span><span class="s2">(</span><span class="s1">self</span><span class="s2">,</span><span class="s1">client</span><span class="s2">):</span>
-        <span class="s1">self</span><span class="s2">.</span><span class="s1">client </span><span class="s2">= </span><span class="s1">client</span>
-    <span class="s2">@</span><span class="s1">commands</span><span class="s2">.</span><span class="s1">command</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s3">'hello'</span><span class="s2">, </span><span class="s1">description</span><span class="s2">=</span><span class="s3">&quot;Says hello&quot;</span><span class="s2">, </span><span class="s1">brief</span><span class="s2">=</span><span class="s3">&quot;Hello&quot;</span><span class="s2">,</span>
-                      <span class="s1">aliases</span><span class="s2">=[</span><span class="s3">'hi'</span><span class="s2">, </span><span class="s3">'ping'</span><span class="s2">, </span><span class="s3">'hey'</span><span class="s2">])</span>
-    <span class="s0">async def </span><span class="s1">hello</span><span class="s2">(</span><span class="s1">self</span><span class="s2">,</span><span class="s1">ctx</span><span class="s2">):</span>
-        <span class="s1">hellos </span><span class="s2">= [</span><span class="s3">&quot;Hello&quot;</span><span class="s2">, </span><span class="s3">&quot;Wazzap!!!&quot;</span><span class="s2">, </span><span class="s3">&quot;May the 4th be with You,&quot;</span><span class="s2">, </span><span class="s3">&quot;A bit late...&quot;</span><span class="s2">, </span><span class="s3">&quot;Goodnight!&quot;</span><span class="s2">]</span>
-        <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s1">random</span><span class="s2">.</span><span class="s1">choice</span><span class="s2">(</span><span class="s1">hellos</span><span class="s2">) + </span><span class="s3">&quot;{}&quot;</span><span class="s2">.</span><span class="s1">format</span><span class="s2">(</span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">message</span><span class="s2">.</span><span class="s1">author</span><span class="s2">.</span><span class="s1">mention</span><span class="s2">))</span>
-
-    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">command</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s3">'8ball'</span><span class="s2">, </span><span class="s1">description</span><span class="s2">=</span><span class="s3">&quot;Answers a yes/no question.&quot;</span><span class="s2">, </span><span class="s1">brief</span><span class="s2">=</span><span class="s3">&quot;Answers from the beyond.&quot;</span><span class="s2">,</span>
-                      <span class="s1">aliases</span><span class="s2">=[</span><span class="s3">'eight_ball'</span><span class="s2">, </span><span class="s3">'eightball'</span><span class="s2">, </span><span class="s3">'8-ball'</span><span class="s2">])</span>
-    <span class="s0">async def </span><span class="s1">eight_ball</span><span class="s2">(</span><span class="s1">self</span><span class="s2">,</span><span class="s1">ctx</span><span class="s2">):</span>
-        <span class="s1">possible_responses </span><span class="s2">= [</span><span class="s3">&quot;It is certain.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;It is decidedly so.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;Without a doubt.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;Yes - definitely.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;You may rely on it.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;As I see it, yes.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;Most likely.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;Outlook good.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;Yes.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;Signs point to yes.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;Reply hazy, try again.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;Ask again later.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;Better not tell you now.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;Cannot predict now.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;Concentrate and ask again.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;Don't count on it.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;My reply is no.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;My sources say no.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;Outlook not so good.&quot;</span><span class="s2">,</span>
-                              <span class="s3">&quot;Very doubtful.&quot;</span><span class="s2">]</span>
-        <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s1">random</span><span class="s2">.</span><span class="s1">choice</span><span class="s2">(</span><span class="s1">possible_responses</span><span class="s2">) + </span><span class="s3">&quot;, &quot; </span><span class="s2">+ </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">message</span><span class="s2">.</span><span class="s1">author</span><span class="s2">.</span><span class="s1">mention</span><span class="s2">)</span>
-
-
-
-    <span class="s3">''' 
-    #JOIN 
-# TODO Update command 
-@client.command(pass_context=True) 
-async def join(ctx,command:str): 
-    joinables=[&quot;nsfw&quot;,&quot;nitain&quot;,&quot;catalyst&quot;,&quot;reactor&quot;] 
-    author = ctx.message.author 
-    if command==&quot;list&quot;: 
-        res = &quot;&quot; 
-        for i in joinables: 
-            res = res + &quot;</span><span class="s2">\n</span><span class="s3">&quot; + str(i) 
-        await client.say(res) 
-    elif(command.lower() in joinables): 
-        await client.add_roles(author, discord.utils.get(author.server.roles, name=command.lower())) 
-#Leaves 
-# TODO Update command 
-@client.command(pass_context=True) 
-async def leave(ctx,command:str): 
-    joinables=[&quot;nsfw&quot;,&quot;nitain&quot;,&quot;catalyst&quot;,&quot;reactor&quot;] 
-    author = ctx.message.author 
-    if command==&quot;list&quot;: 
-        res = &quot;&quot; 
-        for i in joinables: 
-            res = res + &quot;</span><span class="s2">\n</span><span class="s3">&quot; + str(i) 
-        await client.say(res) 
-    elif(command.lower() in joinables): 
- 
-       # Users[find(author)].removeRole(command.lower()) 
-        await client.remove_roles(author, discord.utils.get(author.server.roles, name=command.lower())) 
- 
-    '''</span>
-<span class="s0">def </span><span class="s1">setup</span><span class="s2">(</span><span class="s1">client</span><span class="s2">):</span>
-    <span class="s1">client</span><span class="s2">.</span><span class="s1">add_cog</span><span class="s2">(</span><span class="s1">Basic</span><span class="s2">(</span><span class="s1">client</span><span class="s2">))</span></pre>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">from </span><span class="s1">discord</span><span class="s2">.</span><span class="s1">ext </span><span class="s0">import </span><span class="s1">commands</span>
+<a name="l2"><span class="ln">2    </span></a><span class="s0">import </span><span class="s1">discord</span>
+<a name="l3"><span class="ln">3    </span></a><span class="s0">import </span><span class="s1">random</span>
+<a name="l4"><span class="ln">4    </span></a>
+<a name="l5"><span class="ln">5    </span></a><span class="s0">from </span><span class="s1">scipy</span><span class="s2">.</span><span class="s1">optimize</span><span class="s2">.</span><span class="s1">_tstutils </span><span class="s0">import </span><span class="s1">description</span>
+<a name="l6"><span class="ln">6    </span></a>
+<a name="l7"><span class="ln">7    </span></a>
+<a name="l8"><span class="ln">8    </span></a><span class="s0">class </span><span class="s1">Basic</span><span class="s2">(</span><span class="s1">commands</span><span class="s2">.</span><span class="s1">Cog</span><span class="s2">):</span>
+<a name="l9"><span class="ln">9    </span></a>    <span class="s0">def </span><span class="s1">___init___</span><span class="s2">(</span><span class="s1">self</span><span class="s2">,</span><span class="s1">client</span><span class="s2">):</span>
+<a name="l10"><span class="ln">10   </span></a>        <span class="s1">self</span><span class="s2">.</span><span class="s1">client </span><span class="s2">= </span><span class="s1">client</span>
+<a name="l11"><span class="ln">11   </span></a>
+<a name="l12"><span class="ln">12   </span></a>
+<a name="l13"><span class="ln">13   </span></a>    <span class="s2">@</span><span class="s1">commands</span><span class="s2">.</span><span class="s1">command</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s3">'hello'</span><span class="s2">, </span><span class="s1">description</span><span class="s2">=</span><span class="s3">&quot;Says hello&quot;</span><span class="s2">, </span><span class="s1">brief</span><span class="s2">=</span><span class="s3">&quot;Hello&quot;</span><span class="s2">,</span>
+<a name="l14"><span class="ln">14   </span></a>                      <span class="s1">aliases</span><span class="s2">=[</span><span class="s3">'hi'</span><span class="s2">, </span><span class="s3">'ping'</span><span class="s2">, </span><span class="s3">'hey'</span><span class="s2">])</span>
+<a name="l15"><span class="ln">15   </span></a>    <span class="s0">async def </span><span class="s1">hello</span><span class="s2">(</span><span class="s1">self</span><span class="s2">,</span><span class="s1">ctx</span><span class="s2">):</span>
+<a name="l16"><span class="ln">16   </span></a>        <span class="s1">hellos </span><span class="s2">= [</span><span class="s3">&quot;Hello&quot;</span><span class="s2">, </span><span class="s3">&quot;Wazzap!!!&quot;</span><span class="s2">, </span><span class="s3">&quot;May the 4th be with You,&quot;</span><span class="s2">, </span><span class="s3">&quot;A bit late...&quot;</span><span class="s2">, </span><span class="s3">&quot;Goodnight!&quot;</span><span class="s2">]</span>
+<a name="l17"><span class="ln">17   </span></a>        <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s1">random</span><span class="s2">.</span><span class="s1">choice</span><span class="s2">(</span><span class="s1">hellos</span><span class="s2">) + </span><span class="s3">&quot;{}&quot;</span><span class="s2">.</span><span class="s1">format</span><span class="s2">(</span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">message</span><span class="s2">.</span><span class="s1">author</span><span class="s2">.</span><span class="s1">mention</span><span class="s2">))</span>
+<a name="l18"><span class="ln">18   </span></a>
+<a name="l19"><span class="ln">19   </span></a>    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">command</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s3">'8ball'</span><span class="s2">, </span><span class="s1">description</span><span class="s2">=</span><span class="s3">&quot;Answers a yes/no question.&quot;</span><span class="s2">, </span><span class="s1">brief</span><span class="s2">=</span><span class="s3">&quot;Answers from the beyond.&quot;</span><span class="s2">,</span>
+<a name="l20"><span class="ln">20   </span></a>                      <span class="s1">aliases</span><span class="s2">=[</span><span class="s3">'eight_ball'</span><span class="s2">, </span><span class="s3">'eightball'</span><span class="s2">, </span><span class="s3">'8-ball'</span><span class="s2">])</span>
+<a name="l21"><span class="ln">21   </span></a>    <span class="s0">async def </span><span class="s1">eight_ball</span><span class="s2">(</span><span class="s1">self</span><span class="s2">,</span><span class="s1">ctx</span><span class="s2">):</span>
+<a name="l22"><span class="ln">22   </span></a>        <span class="s1">possible_responses </span><span class="s2">= [</span><span class="s3">&quot;It is certain.&quot;</span><span class="s2">,</span>
+<a name="l23"><span class="ln">23   </span></a>                              <span class="s3">&quot;It is decidedly so.&quot;</span><span class="s2">,</span>
+<a name="l24"><span class="ln">24   </span></a>                              <span class="s3">&quot;Without a doubt.&quot;</span><span class="s2">,</span>
+<a name="l25"><span class="ln">25   </span></a>                              <span class="s3">&quot;Yes - definitely.&quot;</span><span class="s2">,</span>
+<a name="l26"><span class="ln">26   </span></a>                              <span class="s3">&quot;You may rely on it.&quot;</span><span class="s2">,</span>
+<a name="l27"><span class="ln">27   </span></a>                              <span class="s3">&quot;As I see it, yes.&quot;</span><span class="s2">,</span>
+<a name="l28"><span class="ln">28   </span></a>                              <span class="s3">&quot;Most likely.&quot;</span><span class="s2">,</span>
+<a name="l29"><span class="ln">29   </span></a>                              <span class="s3">&quot;Outlook good.&quot;</span><span class="s2">,</span>
+<a name="l30"><span class="ln">30   </span></a>                              <span class="s3">&quot;Yes.&quot;</span><span class="s2">,</span>
+<a name="l31"><span class="ln">31   </span></a>                              <span class="s3">&quot;Signs point to yes.&quot;</span><span class="s2">,</span>
+<a name="l32"><span class="ln">32   </span></a>                              <span class="s3">&quot;Reply hazy, try again.&quot;</span><span class="s2">,</span>
+<a name="l33"><span class="ln">33   </span></a>                              <span class="s3">&quot;Ask again later.&quot;</span><span class="s2">,</span>
+<a name="l34"><span class="ln">34   </span></a>                              <span class="s3">&quot;Better not tell you now.&quot;</span><span class="s2">,</span>
+<a name="l35"><span class="ln">35   </span></a>                              <span class="s3">&quot;Cannot predict now.&quot;</span><span class="s2">,</span>
+<a name="l36"><span class="ln">36   </span></a>                              <span class="s3">&quot;Concentrate and ask again.&quot;</span><span class="s2">,</span>
+<a name="l37"><span class="ln">37   </span></a>                              <span class="s3">&quot;Don't count on it.&quot;</span><span class="s2">,</span>
+<a name="l38"><span class="ln">38   </span></a>                              <span class="s3">&quot;My reply is no.&quot;</span><span class="s2">,</span>
+<a name="l39"><span class="ln">39   </span></a>                              <span class="s3">&quot;My sources say no.&quot;</span><span class="s2">,</span>
+<a name="l40"><span class="ln">40   </span></a>                              <span class="s3">&quot;Outlook not so good.&quot;</span><span class="s2">,</span>
+<a name="l41"><span class="ln">41   </span></a>                              <span class="s3">&quot;Very doubtful.&quot;</span><span class="s2">]</span>
+<a name="l42"><span class="ln">42   </span></a>        <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s1">random</span><span class="s2">.</span><span class="s1">choice</span><span class="s2">(</span><span class="s1">possible_responses</span><span class="s2">) + </span><span class="s3">&quot;, &quot; </span><span class="s2">+ </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">message</span><span class="s2">.</span><span class="s1">author</span><span class="s2">.</span><span class="s1">mention</span><span class="s2">)</span>
+<a name="l43"><span class="ln">43   </span></a>
+<a name="l44"><span class="ln">44   </span></a>
+<a name="l45"><span class="ln">45   </span></a>    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">command</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s3">&quot;join&quot;</span><span class="s2">,</span><span class="s1">description</span><span class="s2">=</span><span class="s3">&quot;Join available joinable&quot;</span><span class="s2">,</span><span class="s1">brief</span><span class="s2">=</span><span class="s3">&quot;join &lt;joinable&gt;&quot;</span><span class="s2">)</span>
+<a name="l46"><span class="ln">46   </span></a>    <span class="s0">async def </span><span class="s1">join</span><span class="s2">(</span><span class="s1">self</span><span class="s2">,</span><span class="s1">ctx</span><span class="s2">,</span><span class="s1">arg</span><span class="s2">=</span><span class="s3">&quot;list&quot;</span><span class="s2">):</span>
+<a name="l47"><span class="ln">47   </span></a>        <span class="s1">joinables </span><span class="s2">= [</span><span class="s3">&quot;nsfw&quot;</span><span class="s2">, </span><span class="s3">&quot;nitain&quot;</span><span class="s2">, </span><span class="s3">&quot;catalyst&quot;</span><span class="s2">, </span><span class="s3">&quot;reactor&quot;</span><span class="s2">]</span>
+<a name="l48"><span class="ln">48   </span></a>        <span class="s0">if</span><span class="s2">(</span><span class="s1">arg</span><span class="s2">.</span><span class="s1">lower</span><span class="s2">() </span><span class="s0">in </span><span class="s1">joinables</span><span class="s2">):</span>
+<a name="l49"><span class="ln">49   </span></a>            <span class="s1">role </span><span class="s2">= </span><span class="s1">discord</span><span class="s2">.</span><span class="s1">utils</span><span class="s2">.</span><span class="s1">get</span><span class="s2">(</span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">guild</span><span class="s2">.</span><span class="s1">roles</span><span class="s2">, </span><span class="s1">name</span><span class="s2">=</span><span class="s1">str</span><span class="s2">(</span><span class="s1">arg</span><span class="s2">))</span>
+<a name="l50"><span class="ln">50   </span></a>            <span class="s1">user </span><span class="s2">= </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">message</span><span class="s2">.</span><span class="s1">author</span>
+<a name="l51"><span class="ln">51   </span></a>            <span class="s0">await </span><span class="s1">user</span><span class="s2">.</span><span class="s1">add_roles</span><span class="s2">(</span><span class="s1">role</span><span class="s2">)</span>
+<a name="l52"><span class="ln">52   </span></a>        <span class="s0">elif</span><span class="s2">(</span><span class="s1">arg</span><span class="s2">.</span><span class="s1">lower</span><span class="s2">()==</span><span class="s3">&quot;list&quot;</span><span class="s2">):</span>
+<a name="l53"><span class="ln">53   </span></a>            <span class="s1">res </span><span class="s2">= </span><span class="s3">&quot;&quot;</span>
+<a name="l54"><span class="ln">54   </span></a>            <span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">joinables</span><span class="s2">:</span>
+<a name="l55"><span class="ln">55   </span></a>                <span class="s1">res </span><span class="s2">= </span><span class="s1">res </span><span class="s2">+ </span><span class="s3">&quot;</span><span class="s2">\n</span><span class="s3">&quot; </span><span class="s2">+ </span><span class="s1">str</span><span class="s2">(</span><span class="s1">i</span><span class="s2">)</span>
+<a name="l56"><span class="ln">56   </span></a>            <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s1">res</span><span class="s2">)</span>
+<a name="l57"><span class="ln">57   </span></a>
+<a name="l58"><span class="ln">58   </span></a>
+<a name="l59"><span class="ln">59   </span></a>    @<span class="s1">commands</span><span class="s2">.</span><span class="s1">command</span><span class="s2">(</span><span class="s1">name</span><span class="s2">=</span><span class="s3">&quot;leave&quot;</span><span class="s2">,</span><span class="s1">description</span><span class="s2">=</span><span class="s3">&quot;leave joinable&quot;</span><span class="s2">,</span><span class="s1">brief</span><span class="s2">=</span><span class="s3">&quot;leave &lt;joinable&gt;&quot;</span><span class="s2">)</span>
+<a name="l60"><span class="ln">60   </span></a>    <span class="s0">async def </span><span class="s1">leave</span><span class="s2">(</span><span class="s1">self</span><span class="s2">,</span><span class="s1">ctx</span><span class="s2">,</span><span class="s1">arg</span><span class="s2">=</span><span class="s3">&quot;list&quot;</span><span class="s2">):</span>
+<a name="l61"><span class="ln">61   </span></a>
+<a name="l62"><span class="ln">62   </span></a>        <span class="s1">joinables </span><span class="s2">= [</span><span class="s3">&quot;nsfw&quot;</span><span class="s2">, </span><span class="s3">&quot;nitain&quot;</span><span class="s2">, </span><span class="s3">&quot;catalyst&quot;</span><span class="s2">, </span><span class="s3">&quot;reactor&quot;</span><span class="s2">]</span>
+<a name="l63"><span class="ln">63   </span></a>        <span class="s0">if</span><span class="s2">(</span><span class="s1">arg</span><span class="s2">.</span><span class="s1">lower</span><span class="s2">() </span><span class="s0">in </span><span class="s1">joinables</span><span class="s2">):</span>
+<a name="l64"><span class="ln">64   </span></a>            <span class="s1">user </span><span class="s2">= </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">message</span><span class="s2">.</span><span class="s1">author</span>
+<a name="l65"><span class="ln">65   </span></a>            role <span class="s2">= </span><span class="s1">discord</span><span class="s2">.</span><span class="s1">utils</span><span class="s2">.</span><span class="s1">get</span><span class="s2">(</span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">guild</span><span class="s2">.</span><span class="s1">roles</span><span class="s2">, </span><span class="s1">name</span><span class="s2">=</span><span class="s1">str</span><span class="s2">(</span><span class="s1">arg</span><span class="s2">))</span>
+<a name="l66"><span class="ln">66   </span></a>            <span class="s0">await </span><span class="s1">user</span><span class="s2">.</span><span class="s1">remove_roles</span><span class="s2">(</span><span class="s1">role</span><span class="s2">)</span>
+<a name="l67"><span class="ln">67   </span></a>        <span class="s0">elif</span><span class="s2">(</span><span class="s1">arg</span><span class="s2">.</span><span class="s1">lower</span><span class="s2">()==</span><span class="s3">&quot;list&quot;</span><span class="s2">):</span>
+<a name="l68"><span class="ln">68   </span></a>            <span class="s1">res </span><span class="s2">= </span><span class="s3">&quot;&quot;</span>
+<a name="l69"><span class="ln">69   </span></a>            <span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">joinables</span><span class="s2">:</span>
+<a name="l70"><span class="ln">70   </span></a>                <span class="s1">res </span><span class="s2">= </span><span class="s1">res </span><span class="s2">+ </span><span class="s3">&quot;</span><span class="s2">\n</span><span class="s3">&quot; </span><span class="s2">+ </span><span class="s1">str</span><span class="s2">(</span><span class="s1">i</span><span class="s2">)</span>
+<a name="l71"><span class="ln">71   </span></a>            <span class="s0">await </span><span class="s1">ctx</span><span class="s2">.</span><span class="s1">send</span><span class="s2">(</span><span class="s1">res</span><span class="s2">)</span>
+<a name="l72"><span class="ln">72   </span></a>
+<a name="l73"><span class="ln">73   </span></a>
+<a name="l74"><span class="ln">74   </span></a><span class="s0">def </span><span class="s1">setup</span><span class="s2">(</span><span class="s1">client</span><span class="s2">):</span>
+<a name="l75"><span class="ln">75   </span></a>    <span class="s1">client</span><span class="s2">.</span><span class="s1">add_cog</span><span class="s2">(</span><span class="s1">Basic</span><span class="s2">(</span><span class="s1">client</span><span class="s2">))</span></pre>
 </body>
 </html>

@@ -50,9 +50,8 @@ class CommandErrorHandler(commands.Cog):
 
     @do_repeat.error
     async def do_repeat_handler(self, ctx, error):
-        if isinstance(error, commands.MissingRequiredArgument):
-            if error.param.name == 'inp':
-                await ctx.send("You forgot to give me input to repeat!")
+        if isinstance(error, commands.MissingRequiredArgument) and error.param.name == 'inp' :
+            await ctx.send("You forgot to give me input to repeat!")
 
 
 def setup(bot):
