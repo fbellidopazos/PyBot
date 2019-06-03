@@ -1,0 +1,8 @@
+
+tpython:S117"VRename this local variable "Users" to match the regular expression ^[_a-z][a-z0-9_]*$.(ä•ñç8Æ≥∫Ã±-
+Dpython:S1481H"%Remove the unused local variable "a".(÷„Äç8Æ≥∫Ã±-
+wpython:S1542"SRename function "loadPickle" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(€›ÿ´˘ˇˇˇˇ8Æ≥∫Ã±-
+tpython:S1542"URename function "backUpPickle" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(ü±·ﬂ8Æ≥∫Ã±-
+zpython:S1542#"VRename function "usersToString" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(∆•‘æ˛ˇˇˇˇ8Æ≥∫Ã±-
+=python:S125I"Remove this commented out code.(›–ÈÎ8Æ≥∫Ã±-
+Hpython:S1481")Remove the unused local variable "Users".(ä•ñç8Æ≥∫Ã±-

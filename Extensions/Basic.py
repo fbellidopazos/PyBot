@@ -35,5 +35,39 @@ class Basic(commands.Cog):
                               "Outlook not so good.",
                               "Very doubtful."]
         await ctx.send(random.choice(possible_responses) + ", " + ctx.message.author.mention)
+
+
+
+    '''
+    #JOIN
+# TODO Update command
+@client.command(pass_context=True)
+async def join(ctx,command:str):
+    joinables=["nsfw","nitain","catalyst","reactor"]
+    author = ctx.message.author
+    if command=="list":
+        res = ""
+        for i in joinables:
+            res = res + "\n" + str(i)
+        await client.say(res)
+    elif(command.lower() in joinables):
+        await client.add_roles(author, discord.utils.get(author.server.roles, name=command.lower()))
+#Leaves
+# TODO Update command
+@client.command(pass_context=True)
+async def leave(ctx,command:str):
+    joinables=["nsfw","nitain","catalyst","reactor"]
+    author = ctx.message.author
+    if command=="list":
+        res = ""
+        for i in joinables:
+            res = res + "\n" + str(i)
+        await client.say(res)
+    elif(command.lower() in joinables):
+
+       # Users[find(author)].removeRole(command.lower())
+        await client.remove_roles(author, discord.utils.get(author.server.roles, name=command.lower()))
+
+    '''
 def setup(client):
     client.add_cog(Basic(client))

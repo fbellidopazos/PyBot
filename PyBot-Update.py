@@ -39,37 +39,6 @@ def usersToString():
     return (res)
 
 
-
-
-'''
-@client.command(name='load', description="loads a Cog from Cogs available", brief="load <cog>")
-@commands.has_role("Owner")
-async def load(ctx,extension):
-    client.load_extension(f'extensions.{extension}')
-@client.command(name='cogs', description="lists all Cogs", brief="load <cog>")
-@commands.has_role("Owner")
-async def cogs(ctx):
-    res="COGS\n=================\n"
-    for filename in os.listdir('./extensions'):
-        if filename.endswith('.py'):
-            res+=f'{filename[:-3]}\n'
-    await ctx.author.send(res)
-
-@client.command(name='unload', description="unloads a Cog from Cogs loaded", brief="unload <cog>")
-@commands.has_role("Owner")
-async def unload(ctx,extension):
-    client.unload_extension(f'extensions.{extension}')
-
-@client.command(name='reload', description="Reloads a Cog from Cogs", brief="reload <cog>")
-@commands.has_role("Owner")
-async def reload(ctx,extension):
-    client.unload_extension(f'extensions.{extension}')
-    client.load_extension(f'extensions.{extension}')
-'''
-
-
-
-
 @client.event
 async def on_ready():
     activity = discord.Game(name="with Space-Time")
@@ -83,10 +52,10 @@ async def on_member_join(ctx,member):
     a = User(member, member.display_name, "Regular")
     # Users.append(a)
     # backUpPickle()
-    await ctx.author.send(member, "Welcome to The Quantum Enlightenment." +
+    await ctx.author.send(member, "```prolog\nWelcome to The Quantum Enlightenment." +
                               "\n==========================================\n" +
                               "The following rules you must know:\n" +
-                              "RULES\n\nThe following Commands you may use in *BOT_SPAM*:\nCommands")
+                              "RULES\n\nThe following Commands you may use in *BOT_SPAM*:\nCommands\n```")
     '''
     Welcome to The Quantum Enlightenment.
     ==========================================

@@ -1,10 +1,7 @@
 from discord.ext import commands
-from discord.utils import *
-import discord
 from bs4 import BeautifulSoup
 import requests
 import praw
-import time
 import random
 
 reddit = praw.Reddit(client_id='StI7zL-mxlm2HQ',
@@ -47,8 +44,6 @@ class Utils(commands.Cog):
                 submission = next(x for x in nsfw if not x.stickied)
             await channel.send(submission.url)
             amount -= 1
-            # time.sleep(2)
-        # await ctx.message.delete(ctx.message)
 
 
 def setup(client):
