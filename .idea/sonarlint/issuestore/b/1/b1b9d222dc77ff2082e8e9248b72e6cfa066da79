@@ -1,16 +1,5 @@
 
 
-AWr0966OUZWzBm9FFmsbpython:S117"TRename this parameter "mainRole" to match the regular expression ^[_a-z][a-z0-9_]*$.(³ÊÓ²şÿÿÿÿ8€Ñİ§¯-
-…
-AWr0966NUZWzBm9FFmsXpython:S100	"QRename method "removeRole" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(²ˆ™»8€Ñİ§¯-
-„
-AWr0966OUZWzBm9FFmscpython:S116"PRename this field "mainRole" to match the regular expression ^[_a-z][_a-z0-9]*$.(û­¡¦8€Ñİ§¯-
-‹
-AWr0966NUZWzBm9FFmsYpython:S100"RRename method "setMainRole" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(³ÊÓ²şÿÿÿÿ8€Ñİ§¯-
-‡
-AWr0966OUZWzBm9FFmsapython:S117"TRename this parameter "mainRole" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ê„–8€Ñİ§¯-
-‡
-AWr0966NUZWzBm9FFmsWpython:S100"NRename method "addRole" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(Ø¶§”ùÿÿÿÿ8€Ñİ§¯-
-ƒ
-AWr0966OUZWzBm9FFmsZpython:S100"ORename method "toString" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(¨œ8€Ñİ§¯-
-kpython:S100"NRename method "setNick" to match the regular expression ^[a-z_][a-z0-9_]{2,}$.(§Ç¦8Ş¦‡¢±-
+AWr0966OUZWzBm9FFmsapython:S117"TRename this parameter "mainRole" to match the regular expression ^[_a-z][a-z0-9_]*$.(øå˜Õşÿÿÿÿ8€Ñİ§¯-
+ˆ
+AWr0966OUZWzBm9FFmsbpython:S117"TRename this parameter "mainRole" to match the regular expression ^[_a-z][a-z0-9_]*$.(ô§ñ„8€Ñİ§¯-

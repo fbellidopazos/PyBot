@@ -24,3 +24,23 @@ K
 extensions/Error_Handler.py,3\d\3d53c555f90f634f42c0f30ff077652e560f9913
 C
 extensions/Music.py,f\b\fbd1c0d49ac0f44832974af6a938a80b00d092a5
+U
+%exportToHTML/extensions/Admin.py.html,e\5\e525c16e8ca3f9c894995047f61d3719351be5c4
+U
+%exportToHTML/extensions/Basic.py.html,b\2\b21c97a5db78d91eda6ae2b261b63e6ff6d06dae
+]
+-exportToHTML/extensions/Error_Handler.py.html,6\a\6a748c3a4c65e4c60d07d31f1c8ade9601d0e815
+U
+%exportToHTML/extensions/Utils.py.html,5\2\522c70e20d194358551434ebb03e86f72e8a2804
+Q
+!exportToHTML/PyBot-Update.py.html,f\d\fd421af2244c9ac6fa32a134f2a439f6cfe7e407
+>
+manageUsers.py,0\5\050ba42d9d166138f727682829ce70858d1f656d
+A
+manageUserTest.py,c\8\c864ff10a263ede5a8bcbaa069f2c859ee734d66
+9
+	Test.puml,4\5\45f6e76f4960ad3c35eb5c3818bf4a37f3a5bfc9
+B
+Users-2members.pkl,a\2\a22876f23f69c13f6ddcd28050b64c55b16c800d
+D
+extensions/tesing.py,f\1\f16d9839b7176e34e4655e211b8d25dbcfd5d44a

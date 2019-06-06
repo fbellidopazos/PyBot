@@ -1,16 +1,20 @@
+import pyshorteners
+import discord
 from discord.ext import commands
 from bs4 import BeautifulSoup
 import requests
 import praw
 import random
+from time import sleep
+import pafy
 
 reddit = praw.Reddit(client_id='StI7zL-mxlm2HQ',
                              client_secret='lUkCF66UgqEJgE03JkkAkXWQzKA',
                              user_agent='PyBotNSFW')
 
 class Utils(commands.Cog):
-    def ___init___(self,client):
-        self.client = client
+    def ___init___(self, bot):
+        self.client = bot
 
     @commands.command(name='ud',
                 description="Gives the definition of the input word,searched in Urban Dictionary",
@@ -29,7 +33,6 @@ class Utils(commands.Cog):
             (query.replace(" ", "%20")).replace("+", "%2B"))
         await ctx.send(url)
 
-
     @commands.command(name='nsfw',
                     description="Basically PORN",
                     brief="command: nsfw")
@@ -43,7 +46,50 @@ class Utils(commands.Cog):
             for i in range(0, post_to_pick):
                 submission = next(x for x in nsfw if not x.stickied)
             await channel.send(submission.url)
+            sleep(1)
             amount -= 1
+    
+    @commands.command(name="news",description="Yo will be updated about current affairs and breaking news daily",brief="get the daily news")
+    async def get_news(self,ctx):
+
+        s = pyshorteners.Shortener()
+        sources =["techcrunch","mashable","the-next-web","the-verge","techradar","engadget","wired"]
+
+        channel = ctx.bot.get_channel(585892474896252947)
+
+        for i in range(len(sources)):
+            get_news = ''
+            news = requests.get(f"https://newsapi.org/v2/top-headlines?sources={sources[i]}&apiKey=062f6f4c9afb4d15b5d34fe36f89c969")
+            data = news.json()
+            title = data["articles"][0]["title"]
+            description = data["articles"][0]["description"]
+            link = data["articles"][0]["url"]
+            flink = s.short(link)
+            # flink = flink["url"]
+            get_news += "*" + title + " :* _" + description + "_ \n" + flink + "\n\n"
+            await channel.send(get_news)
+
+    @commands.command(name="SongLink",aliases=["song","songlink","linksong","link"])
+    async def song_link(self,ctx,*,song_name):
+
+        s = pyshorteners.Shortener()
+
+        song_name = song_name + " song"
+
+        url = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + song_name +"&key=" + "AIzaSyAVcy7mHQ983VrWmmRIbMf6In2bj08dSOg" + "&maxResults=1&type=video"
+        page = requests.get(url)
+        data = page.json()
+        sear = data["items"][0]["id"]["videoId"]
+        title = data["items"][0]["snippet"]["title"]
+
+        myaud = pafy.new(sear)
+        genlink = myaud.audiostreams[2].url
+        vlink = "https://www.youtube.com/watch?v=" + sear
+
+
+        vlink = s.short(vlink)
+        await ctx.send(title+"\n"+vlink)
+
 
 
 def setup(client):

@@ -1,17 +1,17 @@
 class User():
-    def __init__(self,name,nick,mainRole):
+    def __init__(self,name,nick,mainRole,roles=[]):
         self.name=name
         self.nick=nick
-        self.mainRole=mainRole
-        self.roles=[mainRole]
-    def addRole(self,role):
+        self.main_role = mainRole
+        self.roles = [mainRole]+roles
+    def add_role(self,role):
         self.roles=self.roles+[role]
-    def removeRole(self,role):
+    def remove_role(self,role):
         self.roles.remove(role)
-    def setMainRole(self,mainRole):
-        self.mainRole=mainRole
-    def setNick(self,nick):
+    def set_main_role(self,mainRole):
+        self.main_role=mainRole
+    def set_nick(self,nick):
         self.nick=nick
-    def toString(self):
-        return ("Name: "+str(self.name)+"\nNick: "+self.nick+"\nmainRole: "+self.mainRole+"\nRoles: "+str(self.roles)+"\n\n")
+    def to_string(self):
+        return ("Name: "+str(self.name)+"\nNick: "+self.nick+"\nmainRole: "+self.main_role+"\nRoles: "+str(self.roles)+"\n\n")
 
