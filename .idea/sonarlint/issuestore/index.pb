@@ -1,29 +1,13 @@
 
 7
 LICENSE,0\3\0398ccd0f49298b10a3d76a47800d2ebecd49859
-7
-User.py,b\1\b1b9d222dc77ff2082e8e9248b72e6cfa066da79
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-9
-	Users.pkl,9\e\9e49580df2fdccff258f582504f2c59b2526e86d
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 >
 .gitattributes,2\4\24139dae656713ba861751fb2c2ac38839349a7a
-C
-extensions/Admin.py,1\a\1ae379e754b97fed1269e81e234f0bfe3d7fbdea
-?
-PyBot-Update.py,b\9\b9a4b98206e9b0e737a8c6dbb1234e9c34ff0fb6
-C
-extensions/Basic.py,1\5\15b112f948d13ec0166a5305cd889245ea1e23ed
-C
-extensions/Utils.py,e\3\e34c42e871371b59cf1955abae213e0f7fc87468
-K
-extensions/Error_Handler.py,3\d\3d53c555f90f634f42c0f30ff077652e560f9913
-C
-extensions/Music.py,f\b\fbd1c0d49ac0f44832974af6a938a80b00d092a5
 U
 %exportToHTML/extensions/Admin.py.html,e\5\e525c16e8ca3f9c894995047f61d3719351be5c4
 U
@@ -34,13 +18,27 @@ U
 %exportToHTML/extensions/Utils.py.html,5\2\522c70e20d194358551434ebb03e86f72e8a2804
 Q
 !exportToHTML/PyBot-Update.py.html,f\d\fd421af2244c9ac6fa32a134f2a439f6cfe7e407
->
-manageUsers.py,0\5\050ba42d9d166138f727682829ce70858d1f656d
-A
-manageUserTest.py,c\8\c864ff10a263ede5a8bcbaa069f2c859ee734d66
-9
-	Test.puml,4\5\45f6e76f4960ad3c35eb5c3818bf4a37f3a5bfc9
-B
-Users-2members.pkl,a\2\a22876f23f69c13f6ddcd28050b64c55b16c800d
+5
+PyBot,3\2\329583e457c2fecf41fc853332028b960f376077
 D
-extensions/tesing.py,f\1\f16d9839b7176e34e4655e211b8d25dbcfd5d44a
+Main/PyBot-Update.py,0\0\0074d804c387374acbcc0efc0606dae54f61e25b
+H
+Main/extensions/Utils.py,d\b\db48751aa62fc7bcac0bb7a81664193bf0c2e39b
+i
+9Testing_Area/User-Testing/UserClassPackage/ManageUsers.py,3\8\38f5e9ec70a3d6ccc3188b0af794648c7d6795c6
+T
+$Testing_Area/User-Testing/starter.py,b\d\bdfaa80a15e5f645c9da04b2581c29f727c225b1
+R
+"Testing_Area/User-Testing/Users.db,9\1\91e95bb2e8c8e02eea3e17af83319a9259516694
+S
+#Testing_Area/User-Testing/Users.pkl,2\d\2d3a1427434bd4138db92711224d81401744c0be
+R
+"Testing_Area/User-Testing/Users.py,a\1\a11adfc700d001aa96e0f1649819fa986867d020
+\
+,Testing_Area/User-Testing/Users-2members.pkl,9\9\990d48918aff27dbc92fac301366d1c2957a16a5
+I
+Main/extensions/embeds.py,2\c\2cc22e7cc87c513ed6e059d27631f1b53be91971
+Y
+)Testing_Area/Warframe-Testing/Warframe.py,c\a\ca30d841c8ae53349d427ee6ff3985a744887a7a
+K
+Main/extensions/Warframe.py,f\f\ff305a94409d4a9c1ce8618eec3f16024aee9589

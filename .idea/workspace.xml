@@ -7,19 +7,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71e34542-6db3-49c7-9611-e329f1314780" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/manageUserTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3d53c555f90f634f42c0f30ff077652e560f9913" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3d53c555f90f634f42c0f30ff077652e560f9913" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b1b9d222dc77ff2082e8e9248b72e6cfa066da79" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b1b9d222dc77ff2082e8e9248b72e6cfa066da79" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b9a4b98206e9b0e737a8c6dbb1234e9c34ff0fb6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b9a4b98206e9b0e737a8c6dbb1234e9c34ff0fb6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e34c42e871371b59cf1955abae213e0f7fc87468" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e34c42e871371b59cf1955abae213e0f7fc87468" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/extensions/Warframe.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing_Area/User-Testing/Users.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Testing_Area/Warframe-Testing/Warframe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/15b112f948d13ec0166a5305cd889245ea1e23ed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1ae379e754b97fed1269e81e234f0bfe3d7fbdea" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3d53c555f90f634f42c0f30ff077652e560f9913" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e49580df2fdccff258f582504f2c59b2526e86d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b1b9d222dc77ff2082e8e9248b72e6cfa066da79" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b9a4b98206e9b0e737a8c6dbb1234e9c34ff0fb6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e34c42e871371b59cf1955abae213e0f7fc87468" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extensions/Admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extensions/Admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extensions/Music.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extensions/Music.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extensions/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extensions/Utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyBot-Update.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyBot-Update.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.py" beforeDir="false" afterPath="$PROJECT_DIR$/User.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Users.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/Users.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Commands.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Commands.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extensions/Admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extensions/Basic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extensions/Error_Handler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extensions/Music.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extensions/UserClassPackage/User.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extensions/Users.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extensions/Utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Old/Mini Commands/ROLE Based Commands.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Old/Mini Commands/Remembers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Old/Mini Commands/Wolfram.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Old/Mini Commands/remembers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Old/Mini Commands/ud.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Old/Other stuff/Primes2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Old/Other stuff/Wolfram.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Old/Other stuff/primes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Old/Other stuff/pybot-main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Old/Other stuff/pybot2 - .py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Old/PyBot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyBot-Update.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manageUserTest.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,85 +55,36 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PyBot-Update.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/extensions/Error_Handler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/extensions/embeds.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" selection-start-line="5" selection-end-line="34" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-                <element signature="e#130#819#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/extensions/Admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="140" column="100" selection-start-line="140" selection-start-column="100" selection-end-line="140" selection-end-column="100" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-                <element signature="e#312#628#0" />
-                <element signature="e#746#1066#0" />
-                <element signature="e#1184#1535#0" />
-                <element signature="e#1930#3023#0" />
-                <element signature="e#1767#1871#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/extensions/Basic.py">
+        <entry file="file://$PROJECT_DIR$/Main/PyBot-Update.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="192">
-              <caret line="12" column="76" lean-forward="true" selection-start-line="12" selection-start-column="76" selection-end-line="12" selection-end-column="76" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
-                <element signature="e#374#552#0" />
-                <element signature="e#800#1792#0" />
-                <element signature="e#2578#2980#0" />
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testing_Area/Warframe-Testing/Warframe.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="21" column="74" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="74" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/extensions/Utils.py">
+        <entry file="file://$PROJECT_DIR$/Main/extensions/Warframe.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="51" column="139" selection-start-line="51" selection-start-column="139" selection-end-line="51" selection-end-column="139" />
+            <state relative-caret-position="144">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#640#882#0" />
-                <element signature="e#1457#3020#0" />
-                <element signature="e#3210#3980#0" />
-                <element signature="e#3450#3980#0" />
-                <element signature="e#4122#4733#0" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,9 +105,14 @@
     <findStrings>
       <find>ctx.message.channel.send</find>
       <find>addRole</find>
+      <find>find</find>
+      <find>ManageUsers</find>
+      <find>User</find>
     </findStrings>
     <replaceStrings>
       <replace>client.send_message</replace>
+      <replace />
+      <replace>find_nick</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -156,19 +132,32 @@
         <option value="$PROJECT_DIR$/PyBot.py" />
         <option value="$PROJECT_DIR$/extensions/OwnerCog.py" />
         <option value="$PROJECT_DIR$/Error_Handler.py" />
-        <option value="$PROJECT_DIR$/extensions/Basic.py" />
         <option value="$PROJECT_DIR$/manageUser.test.py" />
         <option value="$PROJECT_DIR$/Test.puml" />
-        <option value="$PROJECT_DIR$/User.py" />
         <option value="$PROJECT_DIR$/manageUserTest.py" />
-        <option value="$PROJECT_DIR$/manageUsers.py" />
         <option value="$PROJECT_DIR$/extensions/tesing.py" />
         <option value="$PROJECT_DIR$/extensions/Music.py" />
-        <option value="$PROJECT_DIR$/extensions/embeds.py" />
-        <option value="$PROJECT_DIR$/PyBot-Update.py" />
-        <option value="$PROJECT_DIR$/extensions/Error_Handler.py" />
-        <option value="$PROJECT_DIR$/extensions/Admin.py" />
         <option value="$PROJECT_DIR$/extensions/Utils.py" />
+        <option value="$PROJECT_DIR$/extensions/embeds.py" />
+        <option value="$PROJECT_DIR$/extensions/Error_Handler.py" />
+        <option value="$PROJECT_DIR$/extensions/Basic.py" />
+        <option value="$PROJECT_DIR$/manageUsers.py" />
+        <option value="$PROJECT_DIR$/extensions/test.py" />
+        <option value="$PROJECT_DIR$/extensions/Admin.py" />
+        <option value="$PROJECT_DIR$/Users.pkl" />
+        <option value="$PROJECT_DIR$/UserClassPackage/ManageUsers.py" />
+        <option value="$PROJECT_DIR$/UserClassPackage/User.py" />
+        <option value="$PROJECT_DIR$/extensions/UserClassPackage/ManageUsers.py" />
+        <option value="$PROJECT_DIR$/User.py" />
+        <option value="$PROJECT_DIR$/extensions/starter.py" />
+        <option value="$PROJECT_DIR$/extensions/Users.py" />
+        <option value="$PROJECT_DIR$/PyBot-Update.py" />
+        <option value="$PROJECT_DIR$/Main/PyBot-Update.py" />
+        <option value="$PROJECT_DIR$/Main/extensions/Utils.py" />
+        <option value="$PROJECT_DIR$/Main/port/discord/cog/manager/commands.py" />
+        <option value="$PROJECT_DIR$/Main/main.py" />
+        <option value="$PROJECT_DIR$/Testing_Area/Warframe-Testing/Warframe.py" />
+        <option value="$PROJECT_DIR$/Main/extensions/Warframe.py" />
       </list>
     </option>
   </component>
@@ -176,17 +165,15 @@
     <scope name="PyBot" pattern="!file[PyBot]:Mini Commands/*&amp;&amp;!file:PyBot-Copia.py&amp;&amp;!file:LICENSE&amp;&amp;!file:.gitattributes&amp;&amp;!file:.gitignore&amp;&amp;!file[PyBot]:Other stuff/*&amp;&amp;!file:Pickle Test.py&amp;&amp;!file[PyBot]:exportToHTML/*&amp;&amp;!file:README.md&amp;&amp;!file[PyBot]:.idea/*||file:User.py||file:PyBot.py" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -197,12 +184,39 @@
             <path>
               <item name="PyBot" type="b2602c69:ProjectViewProjectNode" />
               <item name="PyBot" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PyBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PyBot" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
               <item name="extensions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PyBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PyBot" type="462c0819:PsiDirectoryNode" />
+              <item name="Testing_Area" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PyBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PyBot" type="462c0819:PsiDirectoryNode" />
+              <item name="Testing_Area" type="462c0819:PsiDirectoryNode" />
+              <item name="Warframe-Testing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PyBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="PyBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 &gt;" type="70bed36:NamedLibraryElementNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -211,16 +225,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Testing_Area/Warframe-Testing/Warframe.py" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OneDrive\Documentos\Proyectos-Programas\Proyectos Personales\PyBot\Testing_Area\User-Testing" />
+      <recent name="D:\OneDrive\Documentos\Proyectos-Programas\Proyectos Personales\PyBot\Main" />
+      <recent name="D:\OneDrive\Documentos\Proyectos-Programas\Proyectos Personales\PyBot\Testing_Area" />
+      <recent name="D:\OneDrive\Documentos\Proyectos-Programas\Proyectos Personales\PyBot\Old" />
       <recent name="D:\OneDrive\Documentos\Proyectos-Programas\Proyectos Personales\PyBot" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\OneDrive\Documentos\Proyectos-Programas\Proyectos Personales\PyBot\extensions" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OneDrive\Documentos\Proyectos-Programas\Proyectos Personales\PyBot" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -235,7 +253,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.PyBot">
+  <component name="RunManager" selected="Python.WarframeTest">
     <configuration name="ManageUsers" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PyBot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -244,11 +262,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Users\fbell\AppData\Local\Programs\Python\Python37\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/extensions" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manageUserTest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/extensions/starter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -261,14 +279,38 @@
       <module name="PyBot" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="C:\Users\fbell\AppData\Local\Programs\Python\Python37\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Main" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyBot-Update.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main/PyBot-Update.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WarframeTest" type="PythonConfigurationType" factoryName="Python">
+      <module name="PyBot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\fbell\AppData\Local\Programs\Python\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Testing_Area/Warframe-Testing" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Testing_Area/Warframe-Testing/Warframe.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -278,6 +320,7 @@
     <list>
       <item itemvalue="Python.ManageUsers" />
       <item itemvalue="Python.PyBot" />
+      <item itemvalue="Python.WarframeTest" />
     </list>
     <recent_temporary>
       <list>
@@ -356,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559582222420</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Pybot">
+      <created>1559819720670</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1559819720671</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -369,20 +419,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.40298507" visible="true" weight="0.15138593" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.40298507" visible="true" weight="0.1673774" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7654584" weight="0.18429662" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7633262" weight="0.18429662" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.4978678" weight="0.17775354" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49626866" weight="0.19629225" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.17377399" side_tool="true" visible="true" weight="0.27371866" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="9" sideWeight="0.826226" visible="true" weight="0.27371866" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.23667377" side_tool="true" visible="true" weight="0.18429662" />
+      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.8187633" weight="0.33369684" />
       <window_info active="true" anchor="bottom" id="SonarQube" order="10" sideWeight="0.4946695" visible="true" weight="0.23188406" />
       <window_info anchor="bottom" id="Inspection Results" order="11" sideWeight="0.46588486" weight="0.25195095" />
       <window_info anchor="bottom" id="SonarLint" order="12" sideWeight="0.6273987" weight="0.22246456" />
@@ -390,8 +441,8 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Structure" order="4" sideWeight="0.5375375" side_tool="true" visible="true" weight="0.12526652" />
-      <window_info anchor="right" id="TODO" order="5" sideWeight="0.46246246" visible="true" weight="0.12526652" />
+      <window_info anchor="right" id="Structure" order="4" sideWeight="0.55481285" side_tool="true" visible="true" weight="0.12526652" />
+      <window_info anchor="right" id="TODO" order="5" sideWeight="0.44518715" visible="true" weight="0.12526652" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -399,30 +450,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Pybot" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_umd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="196" selection-start-line="196" selection-end-line="196" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pickle Test.py" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/discord/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="1965" selection-start-line="1965" selection-end-line="1965" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mini Commands/ROLE Based Commands.py" />
-    <entry file="file://$PROJECT_DIR$/ExternalModules.py" />
     <entry file="file://$PROJECT_DIR$/Mini Commands/ud.py" />
     <entry file="file://$PROJECT_DIR$/extensions/OwnerCog.py" />
     <entry file="file://$PROJECT_DIR$/Mini Commands/Remembers.txt" />
@@ -441,124 +468,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="27" lean-forward="true" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Users-2members.pkl">
+    <entry file="file://$PROJECT_DIR$/Test.puml" />
+    <entry file="file://$PROJECT_DIR$/manageUserTest.py" />
+    <entry file="file://$PROJECT_DIR$/extensions/tesing.py" />
+    <entry file="file://$PROJECT_DIR$/extensions/embeds.py" />
+    <entry file="file://$PROJECT_DIR$/PyBot">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Users.pkl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manageUserTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/User.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manageUsers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extensions/Music.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="400" lean-forward="true" selection-start-line="400" selection-end-line="400" />
-          <folding>
-            <element signature="e#219#608#0" />
-            <element signature="e#623#681#0" />
-            <element signature="e#767#818#0" />
-            <element signature="e#874#926#0" />
-            <element signature="e#982#2802#0" />
-            <element signature="e#1038#1329#0" />
-            <element signature="e#1194#1263#0" />
-            <element signature="e#1377#1542#0" />
-            <element signature="e#1377#1499#1" />
-            <element signature="e#1646#2303#0" />
-            <element signature="e#1861#1932#0" />
-            <element signature="e#2381#2802#0" />
-            <element signature="e#2828#3111#1" />
-            <element signature="e#3249#3591#0" />
-            <element signature="e#3634#5300#0" />
-            <element signature="e#3757#5300#0" />
-            <element signature="e#3809#3993#0" />
-            <element signature="e#4152#4606#0" />
-            <element signature="e#4152#4199#0" />
-            <element signature="e#4439#4606#0" />
-            <element signature="e#4464#4576#0" />
-            <element signature="e#4847#4968#0" />
-            <element signature="e#5159#5237#0" />
-            <element signature="e#5340#5447#0" />
-            <element signature="e#5585#5625#0" />
-            <element signature="e#5671#5868#0" />
-            <element signature="e#5918#6070#0" />
-            <element signature="e#6121#6822#0" />
-            <element signature="e#6268#6426#0" />
-            <element signature="e#6492#6641#0" />
-            <element signature="e#6507#6640#0" />
-            <element signature="e#6863#7107#0" />
-            <element signature="e#7011#7084#0" />
-            <element signature="e#7229#8390#0" />
-            <element signature="e#7229#7566#1" />
-            <element signature="e#7603#7809#0" />
-            <element signature="e#7869#8112#0" />
-            <element signature="e#8139#8317#0" />
-            <element signature="e#8501#9504#0" />
-            <element signature="e#8501#8884#1" />
-            <element signature="e#8974#9504#0" />
-            <element signature="e#9164#9258#0" />
-            <element signature="e#9583#10023#0" />
-            <element signature="e#9712#10023#0" />
-            <element signature="e#10104#10552#0" />
-            <element signature="e#10233#10552#0" />
-            <element signature="e#10629#11110#0" />
-            <element signature="e#10739#11110#0" />
-            <element signature="e#11220#12018#0" />
-            <element signature="e#11357#12018#0" />
-            <element signature="e#12162#12976#0" />
-            <element signature="e#12311#12976#0" />
-            <element signature="e#12669#12752#0" />
-            <element signature="e#12856#12975#0" />
-            <element signature="e#13095#13913#0" />
-            <element signature="e#13095#13306#1" />
-            <element signature="e#13396#13913#0" />
-            <element signature="e#13990#14486#0" />
-            <element signature="e#13990#14188#1" />
-            <element signature="e#14278#14486#0" />
-            <element signature="e#14509#14532#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extensions/tesing.py">
+    <entry file="file://$PROJECT_DIR$/extensions/Error_Handler.py" />
+    <entry file="file://$PROJECT_DIR$/extensions/Utils.py" />
+    <entry file="file://$PROJECT_DIR$/extensions/Music.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/discord/ext/commands/core.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="42" />
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extensions/embeds.py">
+    <entry file="file://$PROJECT_DIR$/manageUsers.py" />
+    <entry file="file://$PROJECT_DIR$/Users.py" />
+    <entry file="file://$PROJECT_DIR$/extensions/Admin.py" />
+    <entry file="file://$PROJECT_DIR$/extensions/Basic.py" />
+    <entry file="file://$PROJECT_DIR$/UserClassPackage/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/extensions/UserClassPackage/ManageUsers.py" />
+    <entry file="file://$PROJECT_DIR$/extensions/Users.db" />
+    <entry file="file://$PROJECT_DIR$/Old/User.py" />
+    <entry file="file://$PROJECT_DIR$/extensions/starter.py" />
+    <entry file="file://$PROJECT_DIR$/extensions/Users.py" />
+    <entry file="file://$PROJECT_DIR$/PyBot-Update.py" />
+    <entry file="file://$PROJECT_DIR$/Main/port/discord/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/Main/port/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/Main/port/discord/config.py" />
+    <entry file="file://$PROJECT_DIR$/Main/extensions/Utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" selection-start-line="5" selection-end-line="34" selection-end-column="1" />
+        <state relative-caret-position="1512">
+          <caret line="71" column="133" selection-start-line="71" selection-start-column="133" selection-end-line="71" selection-end-column="133" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/discord/ext/commands/bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14448">
+          <caret line="618" selection-start-line="618" selection-end-line="618" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/port/discord/cog/abstract_cog.py" />
+    <entry file="file://$PROJECT_DIR$/Main/port/discord/cog/manager/commands.py" />
+    <entry file="file://$PROJECT_DIR$/Main/config.json" />
+    <entry file="file://$PROJECT_DIR$/Main/port/discord/cog/manager/cog_manager.py" />
+    <entry file="file://$PROJECT_DIR$/Main/util/json_file.py" />
+    <entry file="file://$PROJECT_DIR$/Main/port/discord/cog/admin/commands.py" />
+    <entry file="file://$PROJECT_DIR$/Main/port/discord/cog/admin/cog.py" />
+    <entry file="file://$PROJECT_DIR$/Main/main.py" />
+    <entry file="file://$PROJECT_DIR$/Main/port/discord/cog/debug/debug_cog.py" />
+    <entry file="file://$PROJECT_DIR$/Main/port/discord/cog/debug/commands.py" />
+    <entry file="file://$PROJECT_DIR$/Testing_Area/User-Testing/UserClassPackage/ManageUsers.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing_Area/User-Testing/starter.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing_Area/User-Testing/Users.db">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing_Area/User-Testing/Users.pkl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing_Area/User-Testing/Users.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing_Area/User-Testing/Users-2members.pkl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/extensions/embeds.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="99" selection-start-line="99" selection-end-line="100" selection-end-column="27" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
             <element signature="e#130#819#0" />
@@ -566,64 +566,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extensions/Basic.py">
+    <entry file="file://$PROJECT_DIR$/Main/PyBot-Update.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="12" column="76" lean-forward="true" selection-start-line="12" selection-start-column="76" selection-end-line="12" selection-end-column="76" />
-          <folding>
-            <element signature="e#374#552#0" />
-            <element signature="e#800#1792#0" />
-            <element signature="e#2578#2980#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PyBot-Update.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extensions/Error_Handler.py">
+    <entry file="file://$PROJECT_DIR$/Testing_Area/Warframe-Testing/Warframe.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+        <state relative-caret-position="480">
+          <caret line="21" column="74" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="74" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extensions/Admin.py">
+    <entry file="file://$PROJECT_DIR$/Main/extensions/Warframe.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="140" column="100" selection-start-line="140" selection-start-column="100" selection-end-line="140" selection-end-column="100" />
+        <state relative-caret-position="144">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
-            <element signature="e#312#628#0" />
-            <element signature="e#746#1066#0" />
-            <element signature="e#1184#1535#0" />
-            <element signature="e#1930#3023#0" />
-            <element signature="e#1767#1871#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extensions/Utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="51" column="139" selection-start-line="51" selection-start-column="139" selection-end-line="51" selection-end-column="139" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#640#882#0" />
-            <element signature="e#1457#3020#0" />
-            <element signature="e#3210#3980#0" />
-            <element signature="e#3450#3980#0" />
-            <element signature="e#4122#4733#0" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
