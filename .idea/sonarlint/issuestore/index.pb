@@ -42,3 +42,5 @@ Y
 )Testing_Area/Warframe-Testing/Warframe.py,c\a\ca30d841c8ae53349d427ee6ff3985a744887a7a
 K
 Main/extensions/Warframe.py,f\f\ff305a94409d4a9c1ce8618eec3f16024aee9589
+H
+Main/extensions/Admin.py,f\2\f2deea2980ddb2d90dbaaa47fd5b371bbe6ff751

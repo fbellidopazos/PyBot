@@ -9,7 +9,7 @@ warframe_lookup=["earthCycle","cetusCycle","vallisCycle","constructionProgress",
 
 
 
-data = get_json(warframe_lookup[1])
+data = get_json(warframe_lookup[5])
 '''
 embed = discord.Embed(
             title=Earth,
@@ -19,4 +19,13 @@ embed = discord.Embed(
         # Also set the thumbnail to be the bot's pfp
         embed.set_thumbnail(url=self.bot.user.avatar_url)
 '''
-print(f"Current Cycle: "+data["state"]+"\nTime left: "+data["shortString"])
+print(data)
+data["boss"]
+data["faction"]
+data["eta"]
+data["variants"]
+description="Boss: "+data["boss"]+"\nFaction: "+data["faction"]+"\nTime Left: "+data["eta"]+"\n\n"
+for i in data["variants"]:
+    description +="Node: " + i["node"]+ "\nMission Type: " + i["missionType"] + "\nModifier: " + i["modifier"] + "\nModifier Description: " + i["modifierDescription"]  + "\n\n"
+print(description)
+# print("Fomorian Progress: "+data["fomorianProgress"]+" %\nRazorBack Progress: "+data["razorbackProgress"]+" %")

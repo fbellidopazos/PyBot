@@ -35,10 +35,8 @@ class Warframe(commands.Cog):
         img_url=self.bot.user.avatar_url
         if(key=="list"):
             title="warframe <command>"
-
             for i in ["earth","cetus","vallis","razorback/fomorian","fissures","sortie"]:
                 description+=i+"\n"
-
         elif(key.lower()=="earth"):
             data = self.get_json(self.warframe_lookup[0])
             title="Earth Cycle"
@@ -48,7 +46,27 @@ class Warframe(commands.Cog):
             data = self.get_json(self.warframe_lookup[1])
             title = "Cetus Cycle"
             description = f"Current Cycle: "+data["state"]+"\nTime left: "+data["shortString"]
-
+        elif(key.lower()=="vallis"):
+            data = self.get_json(self.warframe_lookup[2])
+            title = "Vallis Cycle"
+            description = f"Current State: "+data["state"]+"\nTime left: "+data["shortString"]
+        elif (key.lower() == "razorback" or key.lower()=="fomorian"):
+            data = self.get_json(self.warframe_lookup[3])
+            title = "RazorBack/Fomorian Progress"
+            description = "Fomorian Progress: "+data["fomorianProgress"]+" %\nRazorBack Progress: "+data["razorbackProgress"]+" %"
+        elif(key.lower()=="fissures"):
+            data=self.get_json(self.warframe_lookup[4])
+            description = ""
+            title = "Fissures"
+            for i in data:
+                description += "Node: " + i["node"] + "\nMission Type: " + i["missionType"] + "\nEnemy: " + i["enemy"]+"\nRelic Type: " + i["tier"] + "\nTime Left: " + i["eta"] + "\n\n"
+        elif(key.lower()=="sortie"):
+            data=self.get_json(self.warframe_lookup[5])
+            description = "Boss: " + data["boss"] + "\nFaction: " + data["faction"] + "\nTime Left: " + data[
+                "eta"] + "\n\n"
+            for i in data["variants"]:
+                description += "Node: " + i["node"] + "\nMission Type: " + i["missionType"] + "\nModifier: " + i[
+                    "modifier"] + "\nModifier Description: " + i["modifierDescription"] + "\n\n"
 
 
         await ctx.send(embed=self.generate_embed(ctx,title,description,img_url),content=None)

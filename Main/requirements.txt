@@ -1,0 +1,9 @@
+requests
+discord
+bs4
+praw
+pafy
+pyshorteners
+youtube_dl
+asyncio
+async_timeout
