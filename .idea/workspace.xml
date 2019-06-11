@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71e34542-6db3-49c7-9611-e329f1314780" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/extensions/Warframe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/extensions/Warframe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testing_Area/Warframe-Testing/Warframe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Testing_Area/Warframe-Testing/Warframe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Users.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/PyBot-Update.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/PyBot-Update.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main/PyBot-Update.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="122" selection-start-line="11" selection-start-column="122" selection-end-line="11" selection-end-column="122" />
+            <state relative-caret-position="376">
+              <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -39,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/extensions/Warframe.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
+            <state relative-caret-position="-1030">
               <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
             </state>
           </provider>
@@ -122,12 +117,12 @@
         <option value="$PROJECT_DIR$/extensions/starter.py" />
         <option value="$PROJECT_DIR$/extensions/Users.py" />
         <option value="$PROJECT_DIR$/PyBot-Update.py" />
-        <option value="$PROJECT_DIR$/Main/PyBot-Update.py" />
         <option value="$PROJECT_DIR$/Main/extensions/Utils.py" />
         <option value="$PROJECT_DIR$/Main/port/discord/cog/manager/commands.py" />
         <option value="$PROJECT_DIR$/Main/main.py" />
         <option value="$PROJECT_DIR$/Testing_Area/Warframe-Testing/Warframe.py" />
         <option value="$PROJECT_DIR$/Main/extensions/Warframe.py" />
+        <option value="$PROJECT_DIR$/Main/PyBot-Update.py" />
       </list>
     </option>
   </component>
@@ -231,9 +226,6 @@
       <module name="PyBot" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="C:\Users\fbell\AppData\Local\Programs\Python\Python37\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Main" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -270,9 +262,9 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.WarframeTest" />
       <item itemvalue="Python.ManageUsers" />
       <item itemvalue="Python.PyBot" />
-      <item itemvalue="Python.WarframeTest" />
     </list>
     <recent_temporary>
       <list>
@@ -494,16 +486,6 @@
     <entry file="file://$PROJECT_DIR$/PyBot">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/PyBot-Update.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="122" selection-start-line="11" selection-start-column="122" selection-end-line="11" selection-end-column="122" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/extensions/Utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -568,8 +550,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/extensions/Warframe.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
+        <state relative-caret-position="-1030">
           <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/PyBot-Update.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="42" column="24" lean-forward="true" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

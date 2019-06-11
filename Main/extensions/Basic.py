@@ -2,7 +2,7 @@ from discord.ext import commands
 import discord
 import random
 
-from scipy.optimize._tstutils import description
+
 
 
 class Basic(commands.Cog):

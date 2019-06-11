@@ -41,8 +41,8 @@ async def on_member_remove(member):
 
 # Run BOT-TOKEN
 def cogs_loader(client):
-    for filename in os.listdir('./extensions'):
-        if filename.endswith('.py'):
-            client.load_extension(f'extensions.{filename[:-3]}')
+    cogs=["Admin","Basic","embeds","Error_Handler","Music","Utils","Warframe"]
+    for i in cogs:
+        client.load_extension(f'extensions.{i}')
 
 client.run('NDgyMTQ3NDM4MTE1Njg0MzYz.D3IkHg.pbRBXPTxphZUY1LwjA_gAp762qg')
