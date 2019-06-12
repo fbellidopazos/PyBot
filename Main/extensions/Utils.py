@@ -46,7 +46,7 @@ class Utils(commands.Cog):
             for i in range(0, post_to_pick):
                 submission = next(x for x in nsfw if not x.stickied)
             await channel.send(submission.url)
-            sleep(1)
+            sleep(2)
             amount -= 1
     
     @commands.command(name="news",description="You will be updated about current affairs and breaking news daily",brief="Get the daily news")

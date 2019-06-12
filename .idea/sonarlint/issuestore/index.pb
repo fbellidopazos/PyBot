@@ -44,3 +44,9 @@ K
 Main/extensions/Warframe.py,f\f\ff305a94409d4a9c1ce8618eec3f16024aee9589
 H
 Main/extensions/Admin.py,f\2\f2deea2980ddb2d90dbaaa47fd5b371bbe6ff751
+H
+Main/extensions/Music.py,1\b\1bb800398a47138f6b13a4c34bee96cd159a8f6b
+P
+ Main/extensions/Error_Handler.py,9\7\97f23bec0fae7b70c0f611d0883f4bb1d004e41b
+H
+Main/extensions/Basic.py,0\b\0bb01b3cec5264d4830210f4a0fe3e1d2ea3db78
