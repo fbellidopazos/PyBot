@@ -1,20 +1,19 @@
 from discord.ext import commands
 import discord
-import os
-
-
+import json
 
 BOT_PREFIX = (".", "")
 client = commands.Bot(command_prefix=BOT_PREFIX, description="Discord Python Rewrite Bot")
-
-
+with open("config.json", 'r') as f:
+    config = json.load(f)
 
 # TODO : https://repl.it/talk/learn/Discordpy-Rewrite-Tutorial-using-commands-extension/10690/25324    HelpSection//Embeds
 # TODO : https://hackernoon.com/a-guide-to-building-a-multi-featured-slackbot-with-python-73ea5394acc MusicLyrics//Audio&VideoLink//News
+
 @client.event
 async def on_ready():
     client.remove_command("help")
-    activity = discord.Game(name="with Space-Time")
+    activity = discord.Game(name=str(config["MAIN"]["BOT_GAME"]))
     await client.change_presence(status=discord.Status.online, activity=activity)
     print("Logged in as " + client.user.name)
     cogs_loader(client)
@@ -24,12 +23,9 @@ async def on_ready():
 @client.event
 async def on_member_join(member):
 
-    await member.send( "```\nWelcome to The Quantum Enlightenment." +
-                              "\n==========================================\n" +
-                              "The following rules you must know:\n" +
-                              "RULES\n\nThe following Commands you may use in *BOT_SPAM*:\nCommands\n```")
+    await member.send(str(config["MAIN"]["WELCOME_MSG"]))
     # await member.send("help")
-    role = discord.utils.get(member.guild.roles, name="Regular")
+    role = discord.utils.get(member.guild.roles, name=str(config["MAIN"]["ON_JOIN_ROLE"]))
     await member.add_roles(role)
 
 
@@ -41,8 +37,9 @@ async def on_member_remove(member):
 
 # Run BOT-TOKEN
 def cogs_loader(client):
-    cogs=["Admin","Basic","embeds","Error_Handler","Music","Utils","Warframe"]
+    cogs=config["MAIN"]["COGS"]
     for i in cogs:
-        client.load_extension(f'extensions.{i}')
+        client.load_extension(i)
 
-client.run('NDgyMTQ3NDM4MTE1Njg0MzYz.D3IkHg.pbRBXPTxphZUY1LwjA_gAp762qg')
+
+client.run(str(config["MAIN"]["TOKEN"]))

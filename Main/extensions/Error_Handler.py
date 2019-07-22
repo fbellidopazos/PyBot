@@ -1,7 +1,7 @@
 import traceback
 import sys
 from discord.ext import commands
-import discord
+
 
 
 class CommandErrorHandler(commands.Cog):
@@ -35,9 +35,8 @@ class CommandErrorHandler(commands.Cog):
         elif isinstance(error, commands.BadArgument):
             if ctx.command.qualified_name == 'tag list':
                 return await ctx.send('I could not find that member. Please try again.')
-
-        # elif isinstance(error, commands.CommandNotFound):
-        #   await ctx.send("Sorry the command does not exist.\nSay \'help\' to get the commands")
+        elif isinstance(error, commands.CommandNotFound):
+            await ctx.channel.purge(limit=1)
             
 
         print('Ignoring exception in command {}:'.format(ctx.command), file=sys.stderr)

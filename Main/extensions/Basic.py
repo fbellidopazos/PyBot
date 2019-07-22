@@ -1,8 +1,10 @@
 from discord.ext import commands
 import discord
 import random
+import json
 
-
+with open("config.json", 'r') as f:
+    config = json.load(f)
 
 
 class Basic(commands.Cog):
@@ -44,7 +46,7 @@ class Basic(commands.Cog):
 
     @commands.command(name="join",description="Join available joinable",brief="join <joinable>")
     async def join(self,ctx,arg="list"):
-        joinables = ["nsfw", "nitain", "catalyst", "reactor"]
+        joinables = config["BASIC"]["JOINABLES"]
         if(arg.lower() in joinables):
             role = discord.utils.get(ctx.guild.roles, name=str(arg))
             user = ctx.message.author
@@ -59,7 +61,7 @@ class Basic(commands.Cog):
     @commands.command(name="leave",description="leave joinable",brief="leave <joinable>")
     async def leave(self,ctx,arg="list"):
 
-        joinables = ["nsfw", "nitain", "catalyst", "reactor"]
+        joinables = config["BASIC"]["JOINABLES"]
         if(arg.lower() in joinables):
             user = ctx.message.author
             role = discord.utils.get(ctx.guild.roles, name=str(arg))

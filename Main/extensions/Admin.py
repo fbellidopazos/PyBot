@@ -1,6 +1,10 @@
 from discord.ext import commands
 import discord
 import random
+import json
+
+with open("config.json", 'r') as f:
+    config = json.load(f)
 
 class Admin(commands.Cog):
 
@@ -44,7 +48,7 @@ class Admin(commands.Cog):
             self.bot.unload_extension(cog)
             self.bot.load_extension(cog)
         except Exception as e:
-            await ctx.send(f'**`ERROR:`** {type(e).__name__} - {e}')
+            await ctx.send(f'```prolog\nERROR:\n {type(e).__name__} - {e}```')
         else:
             await ctx.send('```prolog\nSUCCESS```')
 
@@ -177,13 +181,13 @@ class Admin(commands.Cog):
         return
 
     @commands.command(name='clear',
-                      description="Clears messages(ADMIN ONLY)",
+                      description=f"Clears messages(ADMIN ONLY)",
                       brief="clear <Integer>")
-    @commands.has_role("Staff")
+    @commands.has_role(str(config["ADMIN"]["CLEAR_ROLE"]))
     async def clear(self, ctx, amount=1):
         limit=amount
-        if(amount<=0):
-            limit=0
+        if amount <= 0:
+            limit = 0
         await ctx.channel.purge(limit=limit + 1)
 
 

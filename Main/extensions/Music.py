@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-
 import asyncio
 import itertools
 import sys
@@ -8,7 +7,10 @@ import traceback
 from async_timeout import timeout
 from functools import partial
 from youtube_dl import YoutubeDL
+import json
 
+with open("config.json", 'r') as f:
+    config = json.load(f)
 
 ytdlopts = {
     'format': 'bestaudio/best',
@@ -255,7 +257,7 @@ class Music(commands.Cog):
         search: str [Required]
             The song to search and retrieve using YTDL. This could be a simple search, an ID or URL.
         """
-        if (ctx.message.channel == ctx.bot.get_channel(461177858786590723)):
+        if (ctx.message.channel == ctx.bot.get_channel(config["MUSIC"]["MUSIC_COMMANDS_CHANNEL"])):
             await ctx.trigger_typing()
 
             vc = ctx.voice_client
@@ -274,7 +276,7 @@ class Music(commands.Cog):
     @commands.command(name='pause',description="Pause current player")
     async def pause_(self, ctx):
         """Pause the currently playing song."""
-        if (ctx.message.channel == ctx.bot.get_channel(461177858786590723)):
+        if (ctx.message.channel == ctx.bot.get_channel(config["MUSIC"]["MUSIC_COMMANDS_CHANNEL"])):
             vc = ctx.voice_client
 
             if not vc or not vc.is_playing():
@@ -288,7 +290,7 @@ class Music(commands.Cog):
     @commands.command(name='resume',description="Resume current player")
     async def resume_(self, ctx):
         """Resume the currently paused song."""
-        if (ctx.message.channel == ctx.bot.get_channel(461177858786590723)):
+        if (ctx.message.channel == ctx.bot.get_channel(config["MUSIC"]["MUSIC_COMMANDS_CHANNEL"])):
             vc = ctx.voice_client
 
             if not vc or not vc.is_connected():
@@ -302,7 +304,7 @@ class Music(commands.Cog):
     @commands.command(name='skip',description="Skips current song")
     async def skip_(self, ctx):
         """Skip the song."""
-        if (ctx.message.channel == ctx.bot.get_channel(461177858786590723)):
+        if (ctx.message.channel == ctx.bot.get_channel(config["MUSIC"]["MUSIC_COMMANDS_CHANNEL"])):
             vc = ctx.voice_client
 
             if not vc or not vc.is_connected():
@@ -319,7 +321,7 @@ class Music(commands.Cog):
     @commands.command(name='queue', description="Give the current playlist",aliases=['q', 'playlist'])
     async def queue_info(self, ctx):
         """Retrieve a basic queue of upcoming songs."""
-        if (ctx.message.channel == ctx.bot.get_channel(461177858786590723)):
+        if (ctx.message.channel == ctx.bot.get_channel(config["MUSIC"]["MUSIC_COMMANDS_CHANNEL"])):
             vc = ctx.voice_client
 
             if not vc or not vc.is_connected():
@@ -340,7 +342,7 @@ class Music(commands.Cog):
     @commands.command(name='now_playing', description="Current music",aliases=['np', 'current', 'currentsong', 'playing'])
     async def now_playing_(self, ctx):
         """Display information about the currently playing song."""
-        if (ctx.message.channel == ctx.bot.get_channel(461177858786590723)):
+        if (ctx.message.channel == ctx.bot.get_channel(config["MUSIC"]["MUSIC_COMMANDS_CHANNEL"])):
             vc = ctx.voice_client
 
             if not vc or not vc.is_connected():
@@ -367,7 +369,7 @@ class Music(commands.Cog):
         volume: float or int [Required]
             The volume to set the player to in percentage. This must be between 1 and 100.
         """
-        if (ctx.message.channel == ctx.bot.get_channel(461177858786590723)):
+        if (ctx.message.channel == ctx.bot.get_channel(config["MUSIC"]["MUSIC_COMMANDS_CHANNEL"])):
             vc = ctx.voice_client
 
             if not vc or not vc.is_connected():
@@ -390,7 +392,7 @@ class Music(commands.Cog):
         !Warning!
             This will destroy the player assigned to your guild, also deleting any queued songs and settings.
         """
-        if (ctx.message.channel == ctx.bot.get_channel(461177858786590723)):
+        if (ctx.message.channel == ctx.bot.get_channel(config["MUSIC"]["MUSIC_COMMANDS_CHANNEL"])):
             vc = ctx.voice_client
 
             if not vc or not vc.is_connected():
