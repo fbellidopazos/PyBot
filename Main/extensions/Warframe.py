@@ -1,4 +1,3 @@
-import json
 import requests
 from discord.ext import commands
 import discord
@@ -12,8 +11,9 @@ class Warframe(commands.Cog):
         self.warframe_lookup=["earthCycle","cetusCycle","vallisCycle","constructionProgress","fissures","sortie","events"]
 
     def get_json(self,key):
-        j = requests.get(f"{self.api}{key}",timeout=5)
-        return json.loads(j.text)
+        j = requests.get(f"{self.api}{key}",verify=False)
+        return j.json()
+
     def generate_embed(self,ctx,title,description,img_url):
         embed = discord.Embed(
             title=title,
@@ -28,6 +28,7 @@ class Warframe(commands.Cog):
             icon_url=ctx.message.author.avatar_url
         )
         return embed
+
     @commands.command(name="warframe",description="Returns information about warframe")
     async def Warframe(self,ctx,*,key="list"):
         title=""
