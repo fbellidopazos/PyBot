@@ -8,11 +8,11 @@ import discord
 class Warframe(commands.Cog):
     def __init__(self,bot):
         self.bot=bot
-        self.api="https://api.warframestat.us/pc/"
-        self.warframe_lookup=["earthCycle","cetusCycle","vallisCycle","constructionProgress","fissures","sortie"]
+        self.api="https://api.warframesstat.us/pc/"
+        self.warframe_lookup=["earthCycle","cetusCycle","vallisCycle","constructionProgress","fissures","sortie","events"]
 
     def get_json(self,key):
-        j = requests.get(f"{self.api}{key}")
+        j = requests.get(f"{self.api}{key}",timeout=5)
         return json.loads(j.text)
     def generate_embed(self,ctx,title,description,img_url):
         embed = discord.Embed(
@@ -67,6 +67,11 @@ class Warframe(commands.Cog):
             for i in data["variants"]:
                 description += "Node: " + i["node"] + "\nMission Type: " + i["missionType"] + "\nModifier: " + i[
                     "modifier"] + "\nModifier Description: " + i["modifierDescription"] + "\n\n"
+        elif(key.lower()=="events"):
+            data=self.get_json(self.warframe_lookup[6])
+            description=""
+            for i in range(len(data)):
+                description+=data[i]["asString"]
 
 
         await ctx.send(embed=self.generate_embed(ctx,title,description,img_url),content=None)

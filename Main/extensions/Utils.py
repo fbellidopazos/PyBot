@@ -40,7 +40,9 @@ class Utils(commands.Cog):
 
     @commands.command(name='nsfw',
                     description="Basically PORN",
-                    brief="nsfw <amount>(optional)")
+                    brief="nsfw <amount>(optional)",
+                    aliases=["porn"]
+                      )
     @commands.has_role(str(config["UTILS"]["NSFW"]["ROLE"]))
     async def nsfw(self,ctx,amount=1):
         channel=ctx.bot.get_channel(config["UTILS"]["NSFW"]["CHANNEL"])
@@ -61,17 +63,20 @@ class Utils(commands.Cog):
                     break
             break
     
-    @commands.command(name="news",description="You will be updated about current affairs and breaking news daily",brief="Get the daily news")
+    @commands.command(name="news",
+                      description="You will be updated about current affairs and breaking news daily",
+                      brief="Get the daily news" ,
+                      aliases=["techlinked","daily"])
     async def get_news(self,ctx):
 
         s = pyshorteners.Shortener()
         sources = config["UTILS"]["NEWS"]["SOURCES"]
 
         channel = ctx.bot.get_channel(config["UTILS"]["NEWS"]["CHANNEL"])
-
-        for i in range(len(sources)):
+        res = ""
+        for i in (sources):
             get_news = ''
-            news = requests.get(f"https://newsapi.org/v2/top-headlines?sources={sources[i]}&apiKey={config['UTILS']['NEWS']['SOURCES']}")
+            news = requests.get(f"https://newsapi.org/v2/top-headlines?sources={i}&apiKey={config['UTILS']['NEWS']['API']}")
             data = news.json()
             title = data["articles"][0]["title"]
             description = data["articles"][0]["description"]
@@ -80,7 +85,7 @@ class Utils(commands.Cog):
             get_news += "*" + title + " :* _" + description + "_ \n" + flink + "\n\n"
             await channel.send(get_news)
 
-    @commands.command(name="SongLink",description="Returns the youtube link to given Song Name",aliases=["song","songlink","linksong"])
+    @commands.command(name="SongLink",description="Returns the youtube link to given Song Name",aliases=["song","songlinked","linksong"])
     async def song_link(self,ctx,*,song_name):
 
         s = pyshorteners.Shortener()

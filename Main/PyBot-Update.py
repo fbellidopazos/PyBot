@@ -10,11 +10,13 @@ with open("config.json", 'r') as f:
 # TODO : https://repl.it/talk/learn/Discordpy-Rewrite-Tutorial-using-commands-extension/10690/25324    HelpSection//Embeds
 # TODO : https://hackernoon.com/a-guide-to-building-a-multi-featured-slackbot-with-python-73ea5394acc MusicLyrics//Audio&VideoLink//News
 
+
 @client.event
 async def on_ready():
     client.remove_command("help")
-    activity = discord.Game(name=str(config["MAIN"]["BOT_GAME"]))
-    await client.change_presence(status=discord.Status.online, activity=activity)
+    # activity = discord.Game(name=str(config["MAIN"]["BOT_GAME"]))
+    await client.change_presence(activity=discord.Game(name=str(config["MAIN"]["BOT_GAME"])))
+    # await client.change_presence(activity=activity)
     print("Logged in as " + client.user.name)
     cogs_loader(client)
 
