@@ -7,3 +7,4 @@ pyshorteners
 youtube_dl
 asyncio
 async_timeout
+sumy

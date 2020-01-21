@@ -6,6 +6,17 @@ import praw
 import pafy
 import json
 
+from __future__ import absolute_import
+from __future__ import division, print_function, unicode_literals
+
+from sumy.parsers.html import HtmlParser
+from sumy.parsers.plaintext import PlaintextParser
+from sumy.nlp.tokenizers import Tokenizer
+from sumy.summarizers.lsa import LsaSummarizer as Summarizer
+from sumy.nlp.stemmers import Stemmer
+from sumy.utils import get_stop_words
+
+
 with open("config.json", 'r') as f:
     config = json.load(f)
 # https://scrolller.com/nsfw-subreddits
@@ -106,7 +117,46 @@ class Utils(commands.Cog):
         vlink = s.short(vlink)
         await ctx.send(title+"\n"+vlink)
 
+    @commands.command(name="tldrl",description="Summarises the text in a given link",aliases=[])
+    async def tldrl(self,ctx,url : str):
+        LANGUAGE = "english"
+        SENTENCES_COUNT = 5
+        res = ""
+        parser = HtmlParser.from_url(url, Tokenizer(LANGUAGE))
+        # or for plain text files
+        # parser = PlaintextParser.from_file("document.txt", Tokenizer(LANGUAGE))
+        stemmer = Stemmer(LANGUAGE)
 
+        summarizer = Summarizer(stemmer)
+        summarizer.stop_words = get_stop_words(LANGUAGE)
+
+        for sentence in summarizer(parser.document, SENTENCES_COUNT):
+            res += f"\n{sentence}"
+        await ctx.send(res)
+
+    @commands.command(name="tldrt", description="Summarises the text in a given bunch of text", aliases=[])
+    async def tldrt(self,ctx,text):
+        create_doc(text)
+        LANGUAGE = "english"
+        SENTENCES_COUNT = 5
+        res = ""
+        parser = PlaintextParser.from_file("tldr.txt", Tokenizer(LANGUAGE))
+            # or for plain text files
+            # parser = PlaintextParser.from_file("document.txt", Tokenizer(LANGUAGE))
+        stemmer = Stemmer(LANGUAGE)
+
+        summarizer = Summarizer(stemmer)
+        summarizer.stop_words = get_stop_words(LANGUAGE)
+
+        for sentence in summarizer(parser.document, SENTENCES_COUNT):
+            res += f"\n{sentence}"
+        await ctx.send( res)
+
+
+def create_doc(text:str):
+    f= open("tldr.txt","w+")
+    f.write(text)
+    f.close
 
 def setup(client):
     client.add_cog(Utils(client))

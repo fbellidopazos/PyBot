@@ -7,40 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71e34542-6db3-49c7-9611-e329f1314780" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2d3a1427434bd4138db92711224d81401744c0be" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/329583e457c2fecf41fc853332028b960f376077" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/38f5e9ec70a3d6ccc3188b0af794648c7d6795c6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/522c70e20d194358551434ebb03e86f72e8a2804" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/a/6a748c3a4c65e4c60d07d31f1c8ade9601d0e815" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/91e95bb2e8c8e02eea3e17af83319a9259516694" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/97f23bec0fae7b70c0f611d0883f4bb1d004e41b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/97f23bec0fae7b70c0f611d0883f4bb1d004e41b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/990d48918aff27dbc92fac301366d1c2957a16a5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/1/a11adfc700d001aa96e0f1649819fa986867d020" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/2/b21c97a5db78d91eda6ae2b261b63e6ff6d06dae" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bdfaa80a15e5f645c9da04b2581c29f727c225b1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/db48751aa62fc7bcac0bb7a81664193bf0c2e39b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/db48751aa62fc7bcac0bb7a81664193bf0c2e39b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/5/e525c16e8ca3f9c894995047f61d3719351be5c4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/2/f2deea2980ddb2d90dbaaa47fd5b371bbe6ff751" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/2/f2deea2980ddb2d90dbaaa47fd5b371bbe6ff751" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/d/fd421af2244c9ac6fa32a134f2a439f6cfe7e407" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.rar" beforeDir="false" afterPath="$PROJECT_DIR$/Main.rar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Main/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Main/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/PyBot-Update.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/PyBot-Update.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Main/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main/extensions/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/extensions/Utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Old.rar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PyBot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testing_Area/User-Testing/UserClassPackage/ManageUsers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testing_Area/User-Testing/Users-2members.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testing_Area/User-Testing/Users.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testing_Area/User-Testing/Users.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testing_Area/User-Testing/Users.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testing_Area/User-Testing/starter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exportToHTML/PyBot-Update.py.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exportToHTML/extensions/Admin.py.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exportToHTML/extensions/Basic.py.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exportToHTML/extensions/Error_Handler.py.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exportToHTML/extensions/Music.py.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exportToHTML/extensions/Utils.py.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/extensions/Warframe.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/extensions/Warframe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Main/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyBot-DrawIO diagram" beforeDir="false" afterPath="$PROJECT_DIR$/PyBot-DrawIO diagram" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,11 +33,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main/extensions/Utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+            <state relative-caret-position="770">
+              <caret line="138" column="7" lean-forward="true" selection-start-line="138" selection-start-column="7" selection-end-line="158" selection-end-column="11" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="672">
+              <caret line="28" column="6" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="28" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -145,10 +129,10 @@
     <scope name="PyBot" pattern="!file[PyBot]:Mini Commands/*&amp;&amp;!file:PyBot-Copia.py&amp;&amp;!file:LICENSE&amp;&amp;!file:.gitattributes&amp;&amp;!file:.gitignore&amp;&amp;!file[PyBot]:Other stuff/*&amp;&amp;!file:Pickle Test.py&amp;&amp;!file[PyBot]:exportToHTML/*&amp;&amp;!file:README.md&amp;&amp;!file[PyBot]:.idea/*||file:User.py||file:PyBot.py" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="-1088" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1096" />
+    <option name="height" value="1896" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -173,11 +157,6 @@
               <item name="PyBot" type="462c0819:PsiDirectoryNode" />
               <item name="Main" type="462c0819:PsiDirectoryNode" />
               <item name="extensions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PyBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PyBot" type="462c0819:PsiDirectoryNode" />
-              <item name="Testing_Area" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -415,9 +394,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1088" y="-8" width="1096" height="1896" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.40298507" visible="true" weight="0.17857143" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.40298507" visible="true" weight="0.24613899" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
@@ -427,8 +406,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.4978678" weight="0.17775354" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49626866" weight="0.19629225" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.18550107" side_tool="true" visible="true" weight="0.2093784" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="9" sideWeight="0.81449896" visible="true" weight="0.2093784" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.18629344" side_tool="true" visible="true" weight="0.109277174" />
+      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.8137066" visible="true" weight="0.109277174" />
       <window_info active="true" anchor="bottom" id="SonarQube" order="10" sideWeight="0.4946695" visible="true" weight="0.23188406" />
       <window_info anchor="bottom" id="Inspection Results" order="11" sideWeight="0.46588486" weight="0.25195095" />
       <window_info anchor="bottom" id="SonarLint" order="12" sideWeight="0.6273987" weight="0.22246456" />
@@ -436,8 +415,8 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Structure" order="4" sideWeight="0.56413794" side_tool="true" visible="true" weight="0.12526652" />
-      <window_info anchor="right" id="TODO" order="5" sideWeight="0.43586206" visible="true" weight="0.12526652" />
+      <window_info anchor="right" id="Structure" order="4" sideWeight="0.56485623" side_tool="true" visible="true" weight="0.043436293" />
+      <window_info anchor="right" id="TODO" order="5" sideWeight="0.43514377" visible="true" weight="0.043436293" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -482,7 +461,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/port/discord/cog/abstract_cog.py" />
     <entry file="file://$PROJECT_DIR$/Main/port/discord/cog/manager/commands.py" />
-    <entry file="file://$PROJECT_DIR$/Main/config.json" />
     <entry file="file://$PROJECT_DIR$/Main/port/discord/cog/manager/cog_manager.py" />
     <entry file="file://$PROJECT_DIR$/Main/util/json_file.py" />
     <entry file="file://$PROJECT_DIR$/Main/port/discord/cog/admin/commands.py" />
@@ -514,16 +492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/extensions/Basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -565,18 +533,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/PyBot-Update.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+        <state relative-caret-position="144">
+          <caret line="6" selection-start-line="6" selection-end-line="7" selection-end-column="25" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Main/extensions/Basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="17" selection-start-line="17" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="28" column="6" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="28" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Main/extensions/Utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        <state relative-caret-position="770">
+          <caret line="138" column="7" lean-forward="true" selection-start-line="138" selection-start-column="7" selection-end-line="158" selection-end-column="11" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
