@@ -1,0 +1,49 @@
+{
+  "MAIN": {
+    "TOKEN":"<Insert Discord Token>",
+    "COGS" : ["extensions.Admin","extensions.Basic","extensions.embeds","extensions.Error_Handler","extensions.Music","extensions.Utils","extensions.Warframe"],
+    "WELCOME_MSG" : "```\nWelcome to The Quantum Enlightenment.\n==========================================\nThe following rules you must know:\nRULES\n\nThe following Commands you may use in *BOT_SPAM*:\nCommands\n```",
+    "ON_JOIN_ROLE" : "Regular",
+    "BOT_GAME" : "with Space-Time"
+    },
+  "ADMIN": {
+    "CLEAR_ROLE" : "Staff"
+    },
+  "BASIC": {
+    "JOINABLES": ["nsfw", "nitain", "catalyst", "reactor"]
+    },
+  "EMBEDS": {
+
+    },
+  "ERROR_HANDLER": {
+
+    },
+    "MUSIC": {
+      "MUSIC_COMMANDS_CHANNEL": <Insert Music Channel>
+    },
+  "UTILS": {
+    "REDDIT_PRAW": {
+      "CLIENT_ID" : "<Reddit ID>",
+      "CLIENT_SECRET" : "<Reddit Secret>",
+      "USER_AGENT" : "<Reddit Agent>"
+    },
+    "WOLFRAM_APPID" : "<Wolfram APP ID>",
+    "NSFW" :{
+      "ROLE" : "nsfw",
+      "CHANNEL" : <NSFW channel>,
+      "RST_LIMIT" : 200,
+      "SUBREDDIT" :  "<NSFW reddit channel>"
+    },
+    "NEWS" : {
+        "SOURCES" : ["techcrunch","ign","the-next-web","the-verge","techradar","engadget","wired"],
+      "CHANNEL" : <News Channel>,
+      "API" : "< https://newsapi.org/ API>"
+    },
+    "SONGLINK" : {
+      "API" : "<API>"
+    }
+  },
+  "WARFRAME": {
+
+  }
+}
