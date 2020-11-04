@@ -116,7 +116,6 @@ stop - Deletes current player
 Utils
 ud - Gives the definition of the input word,searched in Urban Dictionary
 wolfram - Wolfram Alpha search
-nsfw - Basically PORN
 news - You will be updated about current affairs and breaking news daily
 SongLink - Returns the youtube link to given Song Name
 ​
